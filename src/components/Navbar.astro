@@ -1,0 +1,22 @@
+---
+// src/components/Navbar.astro
+---
+<nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+  <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-extrabold tracking-tighter text-black">
+      SIMBA <span class="text-[#2E5E4E]">&</span> GOOD
+    </a>
+    
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center space-x-12 text-sm font-medium text-gray-500">
+      <a href="/vision" class="hover:text-black transition-colors">Vision</a>
+      <a href="/ventures" class="hover:text-black transition-colors">Ventures</a>
+      <a href="/stories" class="hover:text-black transition-colors">Stories</a>
+      <a href="/shop" class="hover:text-black transition-colors">Shop</a>
+      <a href="/contact" class="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-all">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</nav>

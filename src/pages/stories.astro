@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const stories = [
+  {
+    title: "Launching Our First SaaS Venture",
+    summary: "How we are building high-margin software to fund our mission.",
+    date: "June 10, 2026",
+    image: "https://images.unsplash.com/photo-1531498860562-7b93dc2d7661?auto=format&fit=crop&q=80&w=600",
+    link: "#"
+  },
+  {
+    title: "The First Rescue: Meet Simba",
+    summary: "Our first direct impact story from the field.",
+    date: "June 5, 2026",
+    image: "https://images.unsplash.com/photo-1583337139085-68f44fae42a8?auto=format&fit=crop&q=80&w=600",
+    link: "#"
+  },
+  {
+    title: "Why We Chose a Venture Studio Model",
+    summary: "Moving beyond donations to create permanent funding.",
+    date: "May 28, 2026",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca88497c?auto=format&fit=crop&q=80&w=600",
+    link: "#"
+  }
+];
+---
+
+<Layout title="Stories">
+  <Navbar />
+  
+  <!-- Hero -->
+  <section class="pt-40 pb-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-black">
+        Latest Stories
+      </h1>
+      <p class="mt-8 text-xl md:text-2xl text-gray-500 leading-relaxed max-w-2xl mx-auto">
+        Updates from our ventures, rescue operations, and the journey ahead.
+      </p>
+    </div>
+  </section>
+
+  <!-- Stories Grid -->
+  <section class="py-24 bg-gray-50 border-y border-gray-100">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-3 gap-8">
+        {stories.map(story => (
+          <a href={story.link} class="group block">
+            <div class="aspect-video rounded-2xl overflow-hidden bg-gray-200 mb-6">
+              <img src={story.image} alt={story.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <p class="text-sm text-[#2E5E4E] font-semibold uppercase tracking-widest mb-2">{story.date}</p>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-[#2E5E4E] transition-colors">{story.title}</h3>
+            <p class="text-gray-500 leading-relaxed">{story.summary}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const roadmap = [
+  { phase: "Phase 1", title: "Foundation & Fundraising", desc: "Secure initial grant funding to build the venture studio and launch first SaaS MVPs." },
+  { phase: "Phase 2", title: "First Revenue & Rescue", desc: "Launch initial SaaS products and fund first round of dog food, vaccinations, and sterilizations." },
+  { phase: "Phase 3", title: "Infrastructure Build", desc: "Establish low-cost animal food infrastructure and begin sanctuary land acquisition." },
+  { phase: "Phase 4", title: "Veterinary System", desc: "Launch preventive and outpatient veterinary care powered by our proprietary SaaS tools." },
+  { phase: "Phase 5", title: "Global Identity Platform", desc: "Deploy the Global Pet Identity Platform (NFC/Biometrics/Blockchain) for every animal." },
+];
+---
+
+<Layout title="Our Vision">
+  <Navbar />
+  
+  <!-- Hero -->
+  <section class="pt-40 pb-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-black">
+        A permanent funding engine <br class="hidden md:block" /> for animal welfare.
+      </h1>
+      <p class="mt-8 text-xl md:text-2xl text-gray-500 leading-relaxed max-w-2xl mx-auto">
+        We are not a charity. We are a venture studio building profitable technology companies to create a self-sustaining ecosystem of care.
+      </p>
+    </div>
+  </section>
+
+  <!-- The Model -->
+  <section class="py-24 bg-gray-50 border-y border-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-16">The Dual-Entity Model</h2>
+      <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div class="p-8 bg-white rounded-3xl shadow-sm border border-gray-100">
+          <h3 class="text-2xl font-bold mb-4 text-black">Entity 1: The Venture Studio</h3>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            We build high-margin, scalable SaaS startups. Our focus is on recurring revenue and equity growth in the pet-tech and AI sectors.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center"><span class="text-[#2E5E4E] mr-2">✓</span> SaaS Development</li>
+            <li class="flex items-center"><span class="text-[#2E5E4E] mr-2">✓</span> AI Data Platforms</li>
+            <li class="flex items-center"><span class="text-[#2E5E4E] mr-2">✓</span> Venture Investments</li>
+          </ul>
+        </div>
+        <div class="p-8 bg-white rounded-3xl shadow-sm border border-gray-100">
+          <h3 class="text-2xl font-bold mb-4 text-black">Entity 2: The Foundation</h3>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            A non-profit entity funded by studio profits. It executes the physical work of animal welfare: rescue, care, and sanctuary operations.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center"><span class="text-[#2E5E4E] mr-2">✓</span> Rescue Operations</li>
+            <li class="flex items-center"><span class="text-[#2E5E4E] mr-2">✓</span> Veterinary Care</li>
+            <li class="flex items-center"><span class="text-[#2E5E4E] mr-2">✓</span> Global Sanctuaries</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section class="py-24">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-3xl font-bold text-center mb-16">The 20-Year Roadmap</h2>
+      <div class="space-y-8">
+        {roadmap.map(item => (
+          <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl hover:bg-gray-50 transition-colors">
+            <div class="md:w-48 flex-shrink-0">
+              <span class="text-sm font-bold uppercase tracking-widest text-[#2E5E4E]">{item.phase}</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">{item.title}</h3>
+              <p class="text-gray-500">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

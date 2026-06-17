@@ -1,0 +1,26 @@
+---
+// src/layouts/Layout.astro
+const { title } = Astro.props;
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Simba & Good</title>
+    <!-- Fonts: Inter (Body) and Manrope (Headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-white text-black antialiased font-sans selection:bg-[#2E5E4E] selection:text-white">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+</style>

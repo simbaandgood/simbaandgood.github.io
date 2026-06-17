@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Home">
+  <Navbar />
+  
+  <!-- Hero Section: Centered & Bold -->
+  <section class="pt-40 pb-20 lg:pt-56 lg:pb-32 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-black leading-[1.1]">
+        Building profitable technology <br class="hidden md:block" /> to fund animal welfare.
+      </h1>
+      
+      <p class="mt-8 text-xl md:text-2xl text-gray-500 leading-relaxed max-w-2xl mx-auto">
+        A venture studio creating sustainable funding for rescue, veterinary care, and sanctuary infrastructure through high-margin software.
+      </p>
+
+      <div class="mt-12 flex flex-col sm:flex-row justify-center gap-5">
+        <a href="/vision" class="px-8 py-4 bg-black text-white rounded-full font-semibold text-lg hover:scale-105 transition-transform">
+          Our Vision
+        </a>
+        <a href="/shop" class="px-8 py-4 bg-gray-100 text-black rounded-full font-semibold text-lg hover:bg-gray-200 transition-colors">
+          Support the Mission
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Image: The Bichon Frise -->
+    <div class="mt-20 max-w-5xl mx-auto">
+      <!-- REPLACE THIS URL WITH YOUR BICHON FRISE IMAGE -->
+      <img 
+        src="https://images.unsplash.com/photo-1583337139085-68f44fae42a8?auto=format&fit=crop&q=80&w=1600" 
+        alt="Bichon Frise Hero" 
+        class="w-full rounded-3xl shadow-2xl border border-gray-100"
+      />
+    </div>
+  </section>
+
+  <!-- How It Works: The Flywheel -->
+  <section class="py-24 bg-gray-50 border-y border-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-16">The Flywheel Model</h2>
+      <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+        <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
+          <div class="text-4xl mb-4">🚀</div>
+          <h3 class="text-xl font-bold mb-2">Build Companies</h3>
+          <p class="text-gray-500">Launching high-margin, scalable SaaS ventures.</p>
+        </div>
+        <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
+          <div class="text-4xl mb-4">💰</div>
+          <h3 class="text-xl font-bold mb-2">Generate Revenue</h3>
+          <p class="text-gray-500">Creating recurring, profitable cash flows.</p>
+        </div>
+        <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
+          <div class="text-4xl mb-4">🐾</div>
+          <h3 class="text-xl font-bold mb-2">Scale Impact</h3>
+          <p class="text-gray-500">Directing profits to global animal welfare infrastructure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+
+</Layout>

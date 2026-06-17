@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const products = [
+  {
+    name: "Simba & Good Tee",
+    price: "$35.00",
+    description: "Premium cotton tee supporting our mission.",
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=600",
+    stripeLink: "#" // Replace with your Stripe Payment Link
+  },
+  {
+    name: "Sponsor a Dog",
+    price: "$50.00 / month",
+    description: "Monthly sponsorship covers food and vet care for one rescue dog.",
+    image: "https://images.unsplash.com/photo-1583337139085-68f44fae42a8?auto=format&fit=crop&q=80&w=600",
+    stripeLink: "#" // Replace with your Stripe Payment Link
+  },
+  {
+    name: "Vaccination Drive",
+    price: "$25.00",
+    description: "One-time donation to fund a vaccination for a stray animal.",
+    image: "https://images.unsplash.com/photo-1623366302587-bca249df0f8b?auto=format&fit=crop&q=80&w=600",
+    stripeLink: "#" // Replace with your Stripe Payment Link
+  }
+];
+---
+
+<Layout title="Shop & Support">
+  <Navbar />
+  
+  <!-- Hero -->
+  <section class="pt-40 pb-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-black">
+        Support the Mission
+      </h1>
+      <p class="mt-8 text-xl md:text-2xl text-gray-500 leading-relaxed max-w-2xl mx-auto">
+        Every purchase and donation directly funds our venture studio and animal welfare operations.
+      </p>
+    </div>
+  </section>
+
+  <!-- Shop Grid -->
+  <section class="py-24 bg-gray-50 border-y border-gray-100">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-3 gap-8">
+        {products.map(product => (
+          <div class="group bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300">
+            <div class="aspect-square overflow-hidden bg-gray-100">
+              <img src={product.image} alt={product.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-bold mb-2">{product.name}</h3>
+              <p class="text-gray-500 text-sm mb-6">{product.description}</p>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-[#2E5E4E]">{product.price}</span>
+                <a 
+                  href={product.stripeLink} 
+                  class="px-6 py-3 bg-black text-white rounded-full font-semibold text-sm hover:bg-gray-800 transition-colors"
+                >
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

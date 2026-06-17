@@ -1,0 +1,32 @@
+---
+// src/components/Footer.astro
+---
+<footer class="bg-gray-50 border-t border-gray-200 py-16">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+      <div class="mb-6 md:mb-0 text-center md:text-left">
+        <a href="/" class="text-2xl font-extrabold tracking-tighter text-black">
+          SIMBA <span class="text-[#2E5E4E]">&</span> GOOD
+        </a>
+        <p class="mt-2 text-gray-500 text-sm">Building the future of animal welfare.</p>
+      </div>
+      
+      <div class="flex space-x-8 text-sm font-medium text-gray-500">
+        <a href="/vision" class="hover:text-black transition-colors">Vision</a>
+        <a href="/ventures" class="hover:text-black transition-colors">Ventures</a>
+        <a href="/shop" class="hover:text-black transition-colors">Shop</a>
+        <a href="/stories" class="hover:text-black transition-colors">Stories</a>
+        <a href="/contact" class="hover:text-black transition-colors">Contact</a>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+      <p>© {new Date().getFullYear()} Simba & Good. All rights reserved.</p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a href="#" class="hover:text-black transition-colors">Twitter</a>
+        <a href="#" class="hover:text-black transition-colors">LinkedIn</a>
+        <a href="#" class="hover:text-black transition-colors">Instagram</a>
+      </div>
+    </div>
+  </div>
+</footer>

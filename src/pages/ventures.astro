@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+// MVP: Hardcoded list of apps for simplicity. 
+const ventures = [
+  {
+    name: "PetID Pro",
+    description: "Digital identity and medical records for companion animals.",
+    status: "Live",
+    link: "#"
+  },
+  {
+    name: "VetSync",
+    description: "Cloud-based practice management for independent clinics.",
+    status: "Beta",
+    link: "#"
+  },
+  {
+    name: "RescueOS",
+    description: "Operational software for animal welfare NGOs and shelters.",
+    status: "Live",
+    link: "#"
+  }
+];
+---
+
+<Layout title="Our Ventures">
+  <Navbar />
+  
+  <section class="pt-40 pb-20 px-6">
+    <div class="max-w-4xl mx-auto text-center mb-20">
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-black">
+        Our Ventures
+      </h1>
+      <p class="mt-6 text-xl text-gray-500">
+        High-growth software companies funding our mission.
+      </p>
+    </div>
+
+    <!-- Ventures Grid -->
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      {ventures.map(venture => (
+        <a href={venture.link} class="group block p-8 bg-white border border-gray-200 rounded-3xl hover:border-[#2E5E4E] hover:shadow-xl transition-all duration-300">
+          <div class="flex justify-between items-start mb-6">
+            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-xl">
+              🚀
+            </div>
+            <span class="text-xs font-bold uppercase tracking-widest text-[#2E5E4E] bg-green-50 px-3 py-1 rounded-full">
+              {venture.status}
+            </span>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 group-hover:text-[#2E5E4E] transition-colors">
+            {venture.name}
+          </h3>
+          <p class="text-gray-500 leading-relaxed">
+            {venture.description}
+          </p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+</Layout>

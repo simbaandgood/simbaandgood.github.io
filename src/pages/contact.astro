@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contact">
+  <Navbar />
+  
+  <!-- Hero -->
+  <section class="pt-40 pb-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-black">
+        Get in Touch
+      </h1>
+      <p class="mt-8 text-xl md:text-2xl text-gray-500 leading-relaxed max-w-2xl mx-auto">
+        Interested in partnering, investing, or joining our mission? We'd love to hear from you.
+      </p>
+
+      <div class="mt-12 flex flex-col sm:flex-row justify-center gap-5">
+        <a href="mailto:hello@simbaandgood.com" class="px-8 py-4 bg-black text-white rounded-full font-semibold text-lg hover:scale-105 transition-transform">
+          hello@simbaandgood.com
+        </a>
+      </div>
+
+      <div class="mt-20 grid md:grid-cols-3 gap-8 max-w-3xl mx-auto text-left">
+        <div class="p-6 bg-gray-50 rounded-2xl">
+          <h3 class="font-bold mb-2">Investors</h3>
+          <a href="mailto:investors@simbaandgood.com" class="text-gray-500 hover:text-black">investors@simbaandgood.com</a>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-2xl">
+          <h3 class="font-bold mb-2">Partnerships</h3>
+          <a href="mailto:partners@simbaandgood.com" class="text-gray-500 hover:text-black">partners@simbaandgood.com</a>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-2xl">
+          <h3 class="font-bold mb-2">Press</h3>
+          <a href="mailto:press@simbaandgood.com" class="text-gray-500 hover:text-black">press@simbaandgood.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
