@@ -14,7 +14,7 @@ const posts = (await getCollection('blog')).sort(
   <section class="wrap">
     <div class="post-grid">
       {posts.map((post) => (
-        <a class="post-card" href={`/stories/${post.slug}`}>
+        <a class="post-card" href={`/stories/${post.id}`}>
           <span class="date">{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
           <h2>{post.data.title}</h2>
           <p>{post.data.description}</p>
