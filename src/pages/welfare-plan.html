@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Our Animal Welfare Plan — Simba &amp; Good</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{--paper:#FAF8F3;--ink:#1A1A1A;--forest:#234B3E;--forest-deep:#173229;--gold:#C99242;--sage:#E9EFE9;--line:#DED8C9;--muted:#5C6B60;--radius:18px;--wrap:1120px}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-0.01em;margin:0}
+  p{margin:0}a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+  nav{position:sticky;top:0;z-index:50;background:rgba(250,248,243,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:19px;text-decoration:none}
+  .brand span{color:var(--gold)}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{text-decoration:none;font-size:15px;color:var(--muted);font-weight:500}
+  .nav-links a:hover,.nav-links a.active{color:var(--ink)}
+  .btn{display:inline-block;font-weight:600;font-size:15px;text-decoration:none;padding:12px 22px;border-radius:999px;transition:transform .15s ease,box-shadow .15s ease}
+  .btn-primary{background:var(--forest);color:#fff}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(35,75,62,.25)}
+  .hero{padding:70px 0 20px}
+  .hero .eyebrow{color:var(--gold)}
+  .hero h1{font-size:clamp(38px,5.4vw,62px);margin:16px 0 20px;max-width:18ch}
+  .hero p{color:var(--muted);font-size:18.5px;max-width:56ch}
+  .honest{background:var(--sage);border-radius:var(--radius);padding:26px 30px;margin:34px 0 0;font-size:16px;color:var(--muted)}
+  .honest b{color:var(--ink);font-family:"Fraunces",serif}
+  /* staircase */
+  .plan{padding:78px 0}
+  .plan h2{font-size:clamp(28px,3.6vw,40px);max-width:16ch}
+  .plan .sub{color:var(--muted);margin:14px 0 46px;max-width:52ch;font-size:16.5px}
+  .stairs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:end}
+  .stair{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .stair:nth-child(1){margin-top:80px}
+  .stair:nth-child(2){margin-top:40px}
+  .stair.dream{background:var(--forest-deep);color:#fff;border-color:var(--forest-deep);margin-top:0}
+  .stair .phase{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .stair .big{font-family:"Fraunces",serif;font-size:34px;font-weight:600;margin:10px 0 4px}
+  .stair h3{font-size:18px;margin:2px 0 10px;font-weight:500}
+  .stair.dream h3{color:#fff}
+  .stair p{font-size:14px;color:var(--muted)}
+  .stair.dream p{color:#B9C6BC}
+  /* where it goes */
+  .goes{background:var(--forest-deep);color:#fff;padding:74px 0}
+  .goes .eyebrow{color:var(--gold)}
+  .goes h2{color:#fff;font-size:clamp(26px,3.4vw,38px);max-width:16ch;margin-top:14px}
+  .goes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+  .goes-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:24px}
+  .goes-card h3{color:#fff;font-size:17px;font-weight:500}
+  .goes-card p{color:#AEBDB1;font-size:13.5px;margin-top:8px}
+  /* transparency */
+  .trans{padding:80px 0;text-align:center}
+  .trans h2{font-size:clamp(26px,3.4vw,38px);max-width:20ch;margin:14px auto 0}
+  .trans p{color:var(--muted);max-width:54ch;margin:18px auto 0;font-size:16.5px}
+  .cta{background:var(--forest);color:#fff;border-radius:26px;padding:52px;text-align:center;margin:20px auto 80px;max-width:var(--wrap)}
+  .cta h2{color:#fff;font-size:clamp(26px,3.4vw,40px);max-width:20ch;margin:0 auto}
+  .cta p{color:#C4D2C7;margin:14px auto 28px;max-width:44ch}
+  .cta .btn-primary{background:var(--gold);color:var(--forest-deep)}
+  footer{border-top:1px solid var(--line);padding:44px 0}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap}
+  .foot-links a{color:var(--muted);text-decoration:none;font-size:14px}
+  .foot-links a:hover{color:var(--ink)}
+  .copyright{color:var(--muted);font-size:13px;width:100%;border-top:1px solid var(--line);padding-top:18px;margin-top:6px}
+  @media (max-width:860px){
+    .stairs{grid-template-columns:1fr}.stair:nth-child(1),.stair:nth-child(2){margin-top:0}
+    .goes-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav-in">
+  <a class="brand" href="/">Simba <span>&amp;</span> Good</a>
+  <div class="nav-links">
+    <a href="/#stages">How it works</a>
+    <a href="/#pricing">Pricing</a>
+    <a class="active" href="/welfare-plan">Mission</a>
+    <a href="/shop">Shop</a>
+    <a href="/for-brands">For brands</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">Our animal welfare plan</span>
+  <h1>The dream: give away 70% of our profits.</h1>
+  <p>We're not going to pretend a brand-new company can give away most of its profits on day one. So here's the honest version — what we commit to now, and the future we're building toward.</p>
+  <div class="honest">
+    <b>Why "the dream," not "the promise."</b> &nbsp;Early on, profits are thin — so a share of <em>revenue</em> flows to animals from the very first month, no waiting for profitability. As we grow, the share of profits we give climbs. 70% is the destination we're building toward, in the open.
+  </div>
+</div></header>
+
+<section class="plan"><div class="wrap">
+  <span class="eyebrow">The path</span>
+  <h2>How we get there.</h2>
+  <p class="sub">Three phases, each one giving more than the last — and every step reported publicly.</p>
+  <div class="stairs">
+    <div class="stair">
+      <span class="phase">Phase 1 · Now</span>
+      <div class="big">From day one</div>
+      <h3>A share of revenue</h3>
+      <p>A fixed slice of everything we earn goes to animal welfare from launch — before we ever turn a profit.</p>
+    </div>
+    <div class="stair">
+      <span class="phase">Phase 2 · Growth</span>
+      <div class="big">More each year</div>
+      <h3>A growing share of profit</h3>
+      <p>As the business becomes sustainable, we increase what we give — and publish exactly how much.</p>
+    </div>
+    <div class="stair dream">
+      <span class="phase">Phase 3 · The dream</span>
+      <div class="big">70%</div>
+      <h3>Of our profits, to animals</h3>
+      <p>The destination: the large majority of what we make going straight to animals who need it.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="goes"><div class="wrap">
+  <span class="eyebrow">Where it goes</span>
+  <h2>Real help, for real animals.</h2>
+  <div class="goes-grid">
+    <div class="goes-card"><h3>Rescue &amp; rehoming</h3><p>Helping shelters get animals healthy, seen, and adopted.</p></div>
+    <div class="goes-card"><h3>Veterinary care</h3><p>Treatment for animals who'd otherwise go without.</p></div>
+    <div class="goes-card"><h3>Strays &amp; street animals</h3><p>Sterilisation, feeding, and care for animals with no one.</p></div>
+    <div class="goes-card"><h3>Sanctuary support</h3><p>Backing the people already doing the hard work on the ground.</p></div>
+  </div>
+</div></section>
+
+<section class="trans"><div class="wrap">
+  <span class="eyebrow">Our promise on this</span>
+  <h2>Whatever we give, we'll show you.</h2>
+  <p>Every year we'll publish what we earned, what we gave, and where it went. A giving pledge you can't check isn't a pledge — so ours will always be in the open.</p>
+</div></section>
+
+<section><div class="cta">
+  <h2>Care for your pet. Help the ones still waiting.</h2>
+  <p>Every membership moves us one step closer to the dream.</p>
+  <a class="btn btn-primary" href="/#join">Get early access</a>
+</div></section>
+
+<footer><div class="wrap foot">
+  <a class="brand" href="/">Simba <span style="color:var(--gold)">&amp;</span> Good</a>
+  <div class="foot-links">
+    <a href="/#stages">How it works</a><a href="/#pricing">Pricing</a><a href="/welfare-plan">Mission</a><a href="/shop">Shop</a><a href="/for-brands">For brands</a><a href="/contact">Contact</a>
+  </div>
+  <div class="copyright">© 2026 Simba &amp; Good. 70% of profits to animal welfare — that's the dream we're building toward.</div>
+</div></footer>
+</body>
+</html>

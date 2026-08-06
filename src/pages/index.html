@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Simba &amp; Good — a pet lifecycle app</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#FAF8F3;--ink:#1A1A1A;--forest:#234B3E;--forest-deep:#173229;
+    --gold:#C99242;--sage:#E9EFE9;--line:#DED8C9;--muted:#5C6B60;--radius:18px;--wrap:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-0.01em;margin:0}
+  p{margin:0}
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+  nav{position:sticky;top:0;z-index:50;background:rgba(250,248,243,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:19px;letter-spacing:-0.01em;text-decoration:none}
+  .brand span{color:var(--gold)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{text-decoration:none;font-size:15px;color:var(--muted);font-weight:500}
+  .nav-links a:hover{color:var(--ink)}
+  .btn{display:inline-block;font-weight:600;font-size:15px;text-decoration:none;padding:11px 20px;border-radius:999px;transition:transform .15s ease,box-shadow .15s ease}
+  .btn-primary{background:var(--forest);color:#fff}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(35,75,62,.25)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--forest);color:var(--forest)}
+  .hero{padding:72px 0 40px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(38px,5.4vw,64px);margin:18px 0 20px}
+  .hero .lead{font-size:19px;color:var(--muted);max-width:32ch;margin-bottom:30px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero-note{font-size:13.5px;color:var(--muted);margin-top:18px}
+  .hero-img{position:relative}
+  .hero-img img{width:100%;border-radius:var(--radius);display:block;aspect-ratio:4/5;object-fit:cover;box-shadow:0 30px 60px -30px rgba(23,50,41,.45)}
+  .hero-badge{position:absolute;left:-16px;bottom:22px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;box-shadow:0 12px 30px -12px rgba(0,0,0,.18);max-width:220px}
+  .hero-badge b{font-family:"Fraunces",serif;font-weight:600}
+  .hero-badge small{color:var(--muted);font-size:12.5px;display:block;margin-top:2px}
+  .arc{background:var(--forest-deep);color:#F3F0E8;padding:74px 0;margin-top:36px}
+  .arc h2{color:#fff;font-size:clamp(28px,3.6vw,40px);max-width:16ch}
+  .arc .eyebrow{color:var(--gold)}
+  .arc .sub{color:#B9C6BC;margin:16px 0 46px;max-width:52ch;font-size:16.5px}
+  .track{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+  .track:before{content:"";position:absolute;left:6%;right:6%;top:11px;height:2px;background:linear-gradient(90deg,#3a6152,var(--gold),#3a6152)}
+  .stage{position:relative;padding-top:34px}
+  .dot{position:absolute;top:4px;left:0;width:16px;height:16px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(201,146,66,.18)}
+  .stage .age{font-family:"Fraunces",serif;font-size:15px;color:var(--gold);font-weight:600}
+  .stage h3{font-size:17px;color:#fff;margin:4px 0 6px;font-weight:500}
+  .stage p{font-size:13.5px;color:#AEBDB1;line-height:1.5}
+  .section{padding:80px 0}
+  .section h2{font-size:clamp(28px,3.6vw,42px);max-width:18ch}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .step .n{font-family:"Fraunces",serif;font-size:22px;color:var(--gold);font-weight:600}
+  .step h3{font-size:19px;margin:14px 0 8px;font-weight:500}
+  .step p{color:var(--muted);font-size:15px}
+  .pricing{padding:80px 0}
+  .pricing h2{font-size:clamp(28px,3.6vw,42px);max-width:18ch}
+  .psub{color:var(--muted);margin:14px 0 40px;font-size:16.5px}
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .plan{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column}
+  .plan.feature{background:var(--forest-deep);color:#fff;border-color:var(--forest-deep)}
+  .pname{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .pprice{font-family:"Fraunces",serif;font-size:40px;font-weight:600;margin:12px 0 2px}
+  .pprice span{font-size:16px;color:var(--muted)}
+  .plan.feature .pprice span{color:#B9C6BC}
+  .pmeta{font-size:14px;color:var(--muted);margin-bottom:16px}
+  .plan.feature .pmeta{color:#B9C6BC}
+  .plan ul{list-style:none;padding:0;margin:8px 0 0}
+  .plan li{font-size:14.5px;color:var(--muted);padding:7px 0 7px 22px;position:relative}
+  .plan.feature li{color:#CDD9CF}
+  .plan li:before{content:"🐾";position:absolute;left:0;font-size:11px;top:8px}
+  .pnote{text-align:center;color:var(--muted);font-size:14.5px;margin-top:30px}
+  .mission{background:var(--sage);padding:78px 0}
+  .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .mission h2{font-size:clamp(26px,3.4vw,38px);max-width:16ch}
+  .mission p{color:var(--muted);margin-top:18px;font-size:16.5px;max-width:46ch}
+  .give{font-family:"Fraunces",serif;font-size:clamp(40px,6vw,72px);color:var(--forest);font-weight:600;line-height:1;margin-top:8px}
+  .give-label{color:var(--muted);font-size:15px;margin-top:6px}
+  .mission .pill{display:inline-flex;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:14px;font-weight:500;margin-top:24px}
+  .simba{padding:82px 0;text-align:center}
+  .simba h2{font-size:clamp(26px,3.4vw,38px);max-width:20ch;margin:16px auto 0}
+  .simba p{color:var(--muted);max-width:58ch;margin:20px auto 0;font-size:16.5px}
+  .cta{background:var(--forest);color:#fff;border-radius:26px;padding:56px;text-align:center;margin:0 auto 72px;max-width:var(--wrap)}
+  .cta h2{color:#fff;font-size:clamp(28px,3.6vw,42px);max-width:20ch;margin:0 auto}
+  .cta p{color:#C4D2C7;margin:16px auto 30px;max-width:44ch}
+  .cta .btn-primary{background:var(--gold);color:var(--forest-deep)}
+  .cta .btn-primary:hover{box-shadow:0 8px 22px rgba(201,146,66,.35)}
+  footer{border-top:1px solid var(--line);padding:52px 0 40px}
+  .foot-cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+  .foot-cols h4{font-family:"Inter",sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 12px;font-weight:600}
+  .foot-cols a{display:block;text-decoration:none;color:var(--muted);font-size:14.5px;margin-bottom:8px}
+  .foot-cols a:hover{color:var(--ink)}
+  .foot-cols p{color:var(--muted);font-size:14px;margin-top:10px;max-width:26ch}
+  .copyright{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:20px;margin-top:36px}
+  @media (max-width:860px){
+    .hero-grid,.mission-grid{grid-template-columns:1fr;gap:34px}
+    .hero{padding:44px 0 20px}.hero-img{order:-1}
+    .steps{grid-template-columns:1fr}
+    .track{grid-template-columns:1fr 1fr;gap:26px 18px}.track:before{display:none}
+    .nav-links{display:none}
+    .foot-cols{grid-template-columns:1fr 1fr}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="/">Simba <span>&amp;</span> Good</a>
+    <div class="nav-links">
+      <a href="#stages">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="/welfare-plan">Mission</a>
+      <a href="/shop">Shop</a>
+      <a href="/for-brands">For brands</a>
+      <a class="btn btn-primary" href="#join">Get early access</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">A pet lifecycle app</span>
+      <h1>Be there for every stage of their life.</h1>
+      <p class="lead">Simba &amp; Good learns your pet's breed and age, then guides you through what matters at each stage — vaccinations, nutrition, health checks, and the small milestones in between.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#join">Get early access</a>
+        <a class="btn btn-ghost" href="#stages">See how it works</a>
+      </div>
+      <p class="hero-note">🐾 70% of our profits go to animal welfare.</p>
+    </div>
+    <div class="hero-img">
+      <img src="/images/Simba.jpg" alt="Simba, a Bichon Frise and the heart of Simba &amp; Good" />
+      <div class="hero-badge">
+        <b>Meet Simba</b>
+        <small>My Bichon Frise — and the reason Simba &amp; Good exists.</small>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="arc" id="stages">
+  <div class="wrap">
+    <span class="eyebrow">One app, their whole life</span>
+    <h2>Guidance that grows up with them.</h2>
+    <p class="sub">A puppy, an adult, and a senior need completely different care — and a Great Dane ages nothing like a Chihuahua. Simba &amp; Good adjusts to your pet's breed and age, so you always know what's next.</p>
+    <div class="track">
+      <div class="stage"><span class="dot"></span><div class="age">8 weeks</div><h3>New arrival</h3><p>First vaccines, vet setup, and getting the basics right from day one.</p></div>
+      <div class="stage"><span class="dot"></span><div class="age">6 months</div><h3>Building habits</h3><p>Training, nutrition changes, and spay/neuter timing for their breed.</p></div>
+      <div class="stage"><span class="dot"></span><div class="age">1–7 years</div><h3>Prime years</h3><p>Boosters, dental care, and weight tracking to keep them thriving.</p></div>
+      <div class="stage"><span class="dot"></span><div class="age">7+ years</div><h3>Senior care</h3><p>Earlier for large breeds — screenings, mobility, and comfort.</p></div>
+      <div class="stage"><span class="dot"></span><div class="age">A full life</div><h3>Every memory</h3><p>Records, milestones, and a history that stays with them for good.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2>Set it up once. We'll handle the timing.</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>Add your pet</h3><p>Breed, birthday, and a few details. That's all we need to start.</p></div>
+      <div class="step"><div class="n">02</div><h3>Get a plan that fits</h3><p>Reminders and guidance tuned to their exact breed and age — never generic.</p></div>
+      <div class="step"><div class="n">03</div><h3>Do good, effortlessly</h3><p>Most of what Simba &amp; Good earns goes back to animals who need it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <span class="eyebrow">Simple pricing</span>
+    <h2>One membership. Their whole life covered.</h2>
+    <p class="psub">Every plan starts with a 7-day free trial. Cancel anytime.</p>
+    <div class="plans">
+      <div class="plan">
+        <div class="pname">Solo</div>
+        <div class="pprice">$5.99<span>/mo</span></div>
+        <div class="pmeta">One dog</div>
+        <ul>
+          <li>Full breed &amp; age-aware care plan</li>
+          <li>Smart reminders for every stage</li>
+          <li>Health &amp; vaccination records</li>
+        </ul>
+      </div>
+      <div class="plan feature">
+        <div class="pname">Family</div>
+        <div class="pprice">$11.99<span>/mo</span></div>
+        <div class="pmeta">Up to 5 dogs · shared with family</div>
+        <ul>
+          <li>Everything in Solo</li>
+          <li>Up to five dogs</li>
+          <li>Share with the whole household</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <div class="pname">Supporter</div>
+        <div class="pprice">$23.99<span>/mo</span></div>
+        <div class="pmeta">Up to 5 dogs · gives more back</div>
+        <ul>
+          <li>Everything in Family</li>
+          <li>Funds significantly more welfare</li>
+          <li>Supporter badge &amp; impact updates</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pnote">🐾 Every plan helps fund animal welfare — Supporter simply gives more.</p>
+  </div>
+</section>
+
+<section class="mission" id="mission">
+  <div class="wrap mission-grid">
+    <div>
+      <span class="eyebrow">The mission</span>
+      <h2>Everyday care that gives back.</h2>
+      <p>Simba &amp; Good exists to make caring for your pet easier — and to turn a healthy business into real support for the animals who have no one. Rescue, veterinary care, and rehoming for strays and shelter animals.</p>
+      <span class="pill">🐾 Openly reported, every year.</span>
+      <div style="margin-top:22px"><a href="/welfare-plan" style="color:var(--forest);font-weight:600;text-decoration:none">Read our full welfare plan →</a></div>
+    </div>
+    <div>
+      <div class="give">70%</div>
+      <div class="give-label">of our profits go to animal welfare.</div>
+    </div>
+  </div>
+</section>
+
+<section class="simba" id="simba">
+  <div class="wrap">
+    <span class="eyebrow">Our story</span>
+    <h2>It started with a small white dog named Simba.</h2>
+    <p>Simba is my Bichon Frise — healthy, spoiled, and the reason this company exists. Caring for him well meant staying on top of a hundred small things at the right time, and it made me wonder why that was so hard. It also made the gap impossible to ignore: the strays and rescues with no one keeping track of any of it. Simba &amp; Good is the answer to both — better care for the pets we love, and real support for the ones still waiting for someone.</p>
+  </div>
+</section>
+
+<section id="join">
+  <div class="cta">
+    <h2>Be there for their whole life.</h2>
+    <p>Join the early access list and we'll let you know the moment Simba &amp; Good is ready.</p>
+    <a class="btn btn-primary" href="/contact">Get early access</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <a class="brand" href="/">Simba <span style="color:var(--gold)">&amp;</span> Good</a>
+        <p>Better care for the pets we love — and real support for the ones still waiting.</p>
+      </div>
+      <div>
+        <h4>The app</h4>
+        <a href="#stages">How it works</a>
+        <a href="/welfare-plan">Mission</a>
+        <a href="#join">Get early access</a>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="/shop">Guides &amp; digital products</a>
+      </div>
+      <div>
+        <h4>For brands</h4>
+        <a href="/for-brands">Marketing services</a>
+        <a href="/for-brands">Product &amp; design</a>
+        <a href="/contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Simba &amp; Good. 70% of profits to animal welfare.</div>
+  </div>
+</footer>
+
+</body>
+</html>
