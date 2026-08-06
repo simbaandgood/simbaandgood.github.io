@@ -1,0 +1,29 @@
+---
+import Base from './Base.astro';
+const { frontmatter } = Astro.props;
+const date = new Date(frontmatter.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<Base title={`${frontmatter.title} — Simba & Good`} description={frontmatter.description}>
+  <article class="post">
+    <div class="narrow">
+      <a class="back" href="/stories">&larr; All stories</a>
+      <span class="eyebrow">Stories</span>
+      <h1>{frontmatter.title}</h1>
+      <p class="meta">{date}</p>
+      <div class="body"><slot /></div>
+    </div>
+  </article>
+  <style>
+    .post{padding:52px 0 80px}
+    .narrow{max-width:720px;margin:0 auto;padding:0 24px}
+    .back{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500}
+    .post h1{font-size:clamp(32px,4.6vw,48px);margin:14px 0 8px}
+    .meta{color:var(--muted);font-size:14px;margin-bottom:30px}
+    .body{font-size:17px;line-height:1.7;color:#37423b}
+    .body :global(h2){font-family:"Fraunces",serif;font-size:26px;margin:34px 0 10px;color:var(--ink);font-weight:500}
+    .body :global(p){margin:0 0 18px}
+    .body :global(a){color:var(--forest)}
+    .body :global(ul){padding-left:20px}
+    .body :global(li){margin:6px 0}
+  </style>
+</Base>

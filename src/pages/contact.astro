@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Contact — Simba & Good" description="Get early access to the app, or work with our pet-industry agency.">
+  <header class="page-head"><div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h1>Let's talk.</h1>
+    <p>Whether you love pets or run a business that serves them, there's a good reason to be in touch.</p>
+  </div></header>
+
+  <section class="wrap"><div class="cols">
+    <div class="card">
+      <span class="kind">Pet owners</span>
+      <h2>Get early access</h2>
+      <p>Be first to know when Simba &amp; Good launches. No spam — just one email when it's ready.</p>
+      <form class="signup" action="https://formspree.io/f/REPLACE_ME" method="POST">
+        <input type="email" name="email" placeholder="you@email.com" required />
+        <button type="submit" class="btn btn-primary">Notify me</button>
+      </form>
+    </div>
+    <div class="card dark">
+      <span class="kind">Brands</span>
+      <h2>Work with us</h2>
+      <p>Marketing, product &amp; design, or AI for your pet business. Tell us what you're building and we'll come back with a plan.</p>
+      <a class="btn btn-primary" href="mailto:hello@simbaandgood.com?subject=Working%20with%20Simba%20%26%20Good">Book a call</a>
+    </div>
+  </div></section>
+
+  <section class="direct"><div class="wrap">
+    <p>Or reach us directly at <a href="mailto:hello@simbaandgood.com">hello@simbaandgood.com</a></p>
+  </div></section>
+
+  <style>
+    .page-head{padding:66px 0 12px}
+    .page-head h1{font-size:clamp(38px,5.2vw,60px);margin:16px 0 16px}
+    .page-head p{color:var(--muted);font-size:18px;max-width:46ch}
+    .cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:40px 0 30px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px}
+    .card.dark{background:var(--forest-deep);color:#fff;border-color:var(--forest-deep)}
+    .card .kind{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+    .card h2{font-size:24px;margin:12px 0 10px}
+    .card.dark h2{color:#fff}
+    .card p{color:var(--muted);font-size:15px;margin-bottom:22px}
+    .card.dark p{color:#B9C6BC}
+    .signup{display:flex;gap:10px;flex-wrap:wrap}
+    .signup input{flex:1;min-width:180px;padding:12px 16px;border-radius:999px;border:1px solid var(--line);font-family:inherit;font-size:15px;background:var(--paper)}
+    .signup input:focus{outline:2px solid var(--forest);outline-offset:1px}
+    .card.dark .btn-primary{background:var(--gold);color:var(--forest-deep)}
+    .direct{padding:20px 0 80px;text-align:center}
+    .direct p{color:var(--muted);font-size:15px}
+    .direct a{color:var(--forest);font-weight:600;text-decoration:none}
+    @media (max-width:860px){.cols{grid-template-columns:1fr}}
+  </style>
+</Base>

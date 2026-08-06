@@ -1,32 +1,31 @@
 ---
-// src/components/Footer.astro
 ---
-<footer class="bg-gray-50 border-t border-gray-200 py-16">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col md:flex-row justify-between items-center mb-12">
-      <div class="mb-6 md:mb-0 text-center md:text-left">
-        <a href="/" class="text-2xl font-extrabold tracking-tighter text-black">
-          SIMBA <span class="text-[#2E5E4E]">&</span> GOOD
-        </a>
-        <p class="mt-2 text-gray-500 text-sm">Building the future of animal welfare.</p>
+<footer>
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <a class="brand" href="/">Simba <span>&amp;</span> Good</a>
+        <p>Better care for the pets we love — and real support for the ones still waiting.</p>
       </div>
-      
-      <div class="flex space-x-8 text-sm font-medium text-gray-500">
-        <a href="/vision" class="hover:text-black transition-colors">Vision</a>
-        <a href="/ventures" class="hover:text-black transition-colors">Ventures</a>
-        <a href="/shop" class="hover:text-black transition-colors">Shop</a>
-        <a href="/stories" class="hover:text-black transition-colors">Stories</a>
-        <a href="/contact" class="hover:text-black transition-colors">Contact</a>
+      <div>
+        <h4>The app</h4>
+        <a href="/#stages">How it works</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/welfare-plan">Mission</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="/shop">Shop</a>
+        <a href="/stories">Stories</a>
+        <a href="/for-brands">For brands</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
       </div>
     </div>
-
-    <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
-      <p>© {new Date().getFullYear()} Simba & Good. All rights reserved.</p>
-      <div class="flex space-x-6 mt-4 md:mt-0">
-        <a href="#" class="hover:text-black transition-colors">Twitter</a>
-        <a href="#" class="hover:text-black transition-colors">LinkedIn</a>
-        <a href="#" class="hover:text-black transition-colors">Instagram</a>
-      </div>
-    </div>
+    <div class="copyright">&copy; 2026 Simba &amp; Good. 70% of profits to animal welfare &mdash; that&rsquo;s the dream we&rsquo;re building toward.</div>
   </div>
 </footer>

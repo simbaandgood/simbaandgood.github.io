@@ -1,0 +1,98 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="For brands — Simba & Good" description="Marketing, product & design, and AI transformation for the pet industry — fixed monthly scope, from $1,000/mo.">
+  <header class="hero"><div class="wrap">
+    <span class="eyebrow">For brands · The agency</span>
+    <h1>Marketing, product &amp; AI — built for the pet industry.</h1>
+    <p>We help pet businesses grow, modernise, and look the part — from clinics and groomers to pet food, retail, and pet-tech. Led by product and design people who happen to love this industry.</p>
+    <div class="who">
+      <span>Vets &amp; clinics</span><span>Groomers &amp; boarding</span><span>Pet food &amp; D2C</span>
+      <span>Pet retail</span><span>Pet-tech</span><span>Shelters &amp; rescues</span>
+    </div>
+  </div></header>
+
+  <section class="disc"><div class="wrap">
+    <h2>Three things we do well.</h2>
+    <p>Pick one, or combine them. Every engagement is a fixed monthly scope — no surprise invoices, no open-ended retainers.</p>
+  </div></section>
+
+  <section class="wrap">
+    <div class="tiers">
+      <div class="tier">
+        <span class="kind">Marketing · Essentials</span>
+        <h3>Stay visible</h3>
+        <div class="price">$1,000<span style="font-size:16px">/mo</span></div>
+        <span class="per">Rolling monthly · cancel anytime</span>
+        <ul><li>Social content, planned and posted</li><li>Monthly campaign or promotion</li><li>Light design support for what you need</li><li>Simple monthly performance recap</li></ul>
+        <a class="btn btn-primary" href="/contact">Start here</a>
+      </div>
+      <div class="tier feature">
+        <span class="kind">Marketing · Growth</span>
+        <h3>Grow on purpose</h3>
+        <div class="price">$3,000<span style="font-size:16px">/mo</span></div>
+        <span class="per">Most popular for scaling brands</span>
+        <ul><li>Full content engine across channels</li><li>Landing pages &amp; campaign design</li><li>Brand assets and creative direction</li><li>Email / lifecycle marketing</li><li>Monthly strategy session</li></ul>
+        <a class="btn btn-primary" href="/contact">Book a call</a>
+      </div>
+      <div class="tier">
+        <span class="kind">Product &amp; Design</span>
+        <h3>Build something great</h3>
+        <div class="price">from $5,000<span style="font-size:16px">/mo</span></div>
+        <span class="per">For pet-tech &amp; product-led brands</span>
+        <ul><li>UX &amp; UI for apps and websites</li><li>Product strategy and roadmapping</li><li>Design systems and prototypes</li><li>Senior product/design leadership</li></ul>
+        <a class="btn btn-primary" href="/contact">Talk to us</a>
+      </div>
+      <div class="tier">
+        <span class="kind">AI Transformation</span>
+        <h3>Modernise how you run</h3>
+        <div class="price">from $3,500<span style="font-size:16px">/mo</span></div>
+        <span class="per">Practical AI, not hype</span>
+        <ul><li>Automate admin, bookings &amp; follow-ups</li><li>AI customer support &amp; content ops</li><li>Make sense of your customer data</li><li>Train your team to actually use it</li></ul>
+        <a class="btn btn-primary" href="/contact">Explore AI</a>
+      </div>
+    </div>
+
+    <div class="note"><b>Working with us funds the mission too.</b> &nbsp;A share of everything the agency earns goes to animal welfare — so growing your pet business helps animals beyond your own customers.</div>
+  </section>
+
+  <section><div class="cta">
+    <h2>Let's grow your pet business.</h2>
+    <p>Tell us what you're working on. We'll come back with a plan and a fixed monthly price.</p>
+    <a class="btn btn-primary" href="/contact">Book a call</a>
+  </div></section>
+
+  <style>
+    .hero{padding:72px 0 30px}
+    .hero .eyebrow{color:var(--gold)}
+    .hero h1{font-size:clamp(38px,5.2vw,60px);margin:16px 0 20px;max-width:16ch}
+    .hero p{color:var(--muted);font-size:19px;max-width:50ch}
+    .who{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+    .who span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13.5px;color:var(--muted)}
+    .disc{padding:22px 0 8px}
+    .disc h2{font-size:clamp(26px,3.4vw,38px)}
+    .disc p{color:var(--muted);margin-top:12px;max-width:56ch;font-size:16.5px}
+    .tiers{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;padding:38px 0 20px}
+    .tier{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column}
+    .tier.feature{background:var(--forest-deep);color:#fff;border-color:var(--forest-deep)}
+    .tier .kind{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+    .tier h3{font-size:23px;margin:10px 0 6px;font-weight:500}
+    .tier.feature h3{color:#fff}
+    .tier .price{font-family:"Fraunces",serif;font-size:34px;font-weight:600;margin:8px 0 2px}
+    .tier .per{font-size:13.5px;color:var(--muted)}
+    .tier.feature .per{color:#B9C6BC}
+    .tier ul{list-style:none;padding:0;margin:20px 0 0;flex:1}
+    .tier li{font-size:14.5px;color:var(--muted);padding:7px 0 7px 22px;position:relative}
+    .tier.feature li{color:#CDD9CF}
+    .tier li:before{content:"🐾";position:absolute;left:0;font-size:12px;top:8px}
+    .tier .btn{margin-top:22px;text-align:center}
+    .tier.feature .btn-primary{background:var(--gold);color:var(--forest-deep)}
+    .note{background:var(--sage);border-radius:var(--radius);padding:26px 30px;margin:16px 0 40px;font-size:15.5px;color:var(--muted)}
+    .note b{color:var(--ink);font-family:"Fraunces",serif}
+    .cta{background:var(--forest);color:#fff;border-radius:26px;padding:52px;text-align:center;margin:0 auto 80px;max-width:var(--wrap)}
+    .cta h2{color:#fff;font-size:clamp(26px,3.4vw,40px);max-width:20ch;margin:0 auto}
+    .cta p{color:#C4D2C7;margin:14px auto 28px;max-width:46ch}
+    .cta .btn-primary{background:var(--gold);color:var(--forest-deep)}
+    @media (max-width:860px){.tiers{grid-template-columns:1fr}}
+  </style>
+</Base>

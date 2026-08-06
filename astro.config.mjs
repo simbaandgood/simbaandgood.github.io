@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 
+// Custom domain (simbaandgood.com) serves from the root, so no base path is needed.
 export default defineConfig({
-  integrations: [tailwind()],
+  site: 'https://simbaandgood.com',
 });
