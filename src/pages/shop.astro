@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 ---
 <Base title="Shop for Good — Simba & Good" description="Beautifully made digital guides and templates for every stage of your pet's life. Every purchase helps fund animal welfare." path="/shop">
   <header class="page-head"><div class="wrap">
-    <span class="eyebrow">Shop for Good · Simba &amp; Good</span>
+    <img src="/images/shop-for-good-wordmark.svg" alt="Shop for Good — Simba &amp; Good" class="shop-logo" />
     <h1>Little guides for big responsibilities.</h1>
     <p>Practical, beautifully made digital guides and templates for every stage of your pet's life — instant downloads, yours forever.</p>
     <span class="give-strip">🐾 Every purchase helps fund animal welfare.</span>
@@ -34,6 +34,7 @@ import Base from '../layouts/Base.astro';
 
   <style>
     .page-head{padding:64px 0 20px}
+    .shop-logo{width:230px;height:auto;display:block;margin-bottom:22px}
     .page-head h1{font-size:clamp(36px,5vw,58px);margin:16px 0 16px}
     .page-head p{color:var(--muted);font-size:18px;max-width:52ch}
     .give-strip{display:inline-flex;gap:10px;align-items:center;background:var(--sage);border-radius:999px;padding:9px 18px;font-size:14px;font-weight:500;margin-top:22px}
