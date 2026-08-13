@@ -1,9 +1,34 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const title = 'Simba & Good for Brands — Marketing, Product & AI for Pet Businesses';
+const description = 'Simba & Good is the agency arm helping pet businesses grow: marketing, product & design, and a provider-neutral AI service line starting with a $999 AI Readiness Assessment.';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Marketing, Product & Design, and AI Consulting for Pet Businesses',
+  provider: { '@type': 'Organization', name: 'Simba & Good' },
+  areaServed: 'Global',
+  audience: { '@type': 'Audience', audienceType: 'Pet industry businesses' },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'AI Services for Pet Businesses',
+    itemListElement: [
+      { '@type': 'Offer', name: 'AI Readiness Assessment', price: '999', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'AI Concierge (monthly)', price: '1500', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Process Redesign', price: '3500', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Automation Builds', priceRange: '$2000-$3500', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Knowledge Systems', priceRange: '$3500+', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Custom Assistants', priceRange: '$4000-$6000', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Full AI Implementation', priceRange: '$10000-$18000+', priceCurrency: 'USD' },
+    ],
+  },
+};
 ---
-<Base title="For brands — Simba & Good" description="Marketing, product & design, and AI transformation for the pet industry — fixed monthly scope, from $1,000/mo.">
+<Base title={title} description={description} path="/for-brands" structuredData={serviceSchema}>
   <header class="hero"><div class="wrap">
-    <span class="eyebrow">For brands · The agency</span>
+    <span class="eyebrow">For brands · The Simba &amp; Good agency</span>
     <h1>Marketing, product &amp; AI — built for the pet industry.</h1>
     <p>We help pet businesses grow, modernise, and look the part — from clinics and groomers to pet food, retail, and pet-tech. Led by product and design people who happen to love this industry.</p>
     <div class="who">
@@ -43,18 +68,40 @@ import Base from '../layouts/Base.astro';
         <ul><li>UX &amp; UI for apps and websites</li><li>Product strategy and roadmapping</li><li>Design systems and prototypes</li><li>Senior product/design leadership</li></ul>
         <a class="btn btn-primary" href="/contact">Talk to us</a>
       </div>
-      <div class="tier">
-        <span class="kind">AI Transformation</span>
-        <h3>Modernise how you run</h3>
-        <div class="price">from $3,500<span style="font-size:16px">/mo</span></div>
-        <span class="per">Practical AI, not hype</span>
-        <ul><li>Automate admin, bookings &amp; follow-ups</li><li>AI customer support &amp; content ops</li><li>Make sense of your customer data</li><li>Train your team to actually use it</li></ul>
-        <a class="btn btn-primary" href="/contact">Explore AI</a>
-      </div>
     </div>
 
     <div class="note"><b>Working with us funds the mission too.</b> &nbsp;A share of everything the agency earns goes to animal welfare — so growing your pet business helps animals beyond your own customers.</div>
   </section>
+
+  <section class="ai-section"><div class="wrap">
+    <span class="eyebrow">AI for pet businesses</span>
+    <h2>Start with the diagnosis. Let it reveal the higher-ticket work.</h2>
+    <p class="ai-sub">A provider-neutral service line — we build with whatever tool fits, so you're never locked into one vendor. Every engagement leaves your team with AI tools they own and can keep using without us.</p>
+
+    <div class="ai-wedge">
+      <span class="ai-n">01</span>
+      <div>
+        <h3>AI Readiness Assessment <span class="star">★ start here</span></h3>
+        <p>A 45-minute working session → a prioritised map of 3–7 places AI saves your team real hours (bookings, client comms, inventory, content, reviews). Most assessments surface two or three higher-value projects.</p>
+      </div>
+      <div class="ai-price">$999<span>flat, credited toward what's next</span></div>
+    </div>
+
+    <div class="ai-ladder">
+      <div class="ai-row"><span class="ai-n">02</span><div class="ai-name">AI Concierge <small>retainer</small></div><div class="ai-p">$1,500<small>/mo</small></div><div class="ai-d">Two 45-min calls a month, turned into reusable AI assistants your team actually uses.</div></div>
+      <div class="ai-row"><span class="ai-n">03</span><div class="ai-name">Process Redesign</div><div class="ai-p">$3,500</div><div class="ai-d">Take one painful multi-step process and cut it down. One clinic: 25-step intake → 10.</div></div>
+      <div class="ai-row"><span class="ai-n">04</span><div class="ai-name">Automation Builds</div><div class="ai-p">$2K–$3.5K</div><div class="ai-d">Connect the tools you already run into hands-off workflows — booking to follow-up, automatically.</div></div>
+      <div class="ai-row"><span class="ai-n">05</span><div class="ai-name">Knowledge Systems</div><div class="ai-p">$3.5K+</div><div class="ai-d">Turn scattered info — emails, protocols, catalogs — into instant, on-brand answers.</div></div>
+      <div class="ai-row"><span class="ai-n">06</span><div class="ai-name">Custom Assistants</div><div class="ai-p">$4K–$6K</div><div class="ai-d">Bespoke AI tools built for your business. A 45-minute task, down to 5 minutes.</div></div>
+      <div class="ai-row"><span class="ai-n">07</span><div class="ai-name">Full AI Implementation</div><div class="ai-p">$10K–$18K+</div><div class="ai-d">Assistants, automations, and knowledge systems deployed across the business, with training.</div></div>
+    </div>
+
+    <div class="ai-model">
+      <h4>The model</h4>
+      <ol><li>The assessment is the baseline.</li><li>Anchor on hours saved, not hours worked.</li><li>You own what we build — no lock-in.</li></ol>
+    </div>
+    <a class="btn btn-primary" href="/contact">Book the $999 assessment</a>
+  </div></section>
 
   <section><div class="cta">
     <h2>Let's grow your pet business.</h2>
@@ -72,7 +119,7 @@ import Base from '../layouts/Base.astro';
     .disc{padding:22px 0 8px}
     .disc h2{font-size:clamp(26px,3.4vw,38px)}
     .disc p{color:var(--muted);margin-top:12px;max-width:56ch;font-size:16.5px}
-    .tiers{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;padding:38px 0 20px}
+    .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:38px 0 20px}
     .tier{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column}
     .tier.feature{background:var(--forest-deep);color:#fff;border-color:var(--forest-deep)}
     .tier .kind{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
@@ -93,6 +140,34 @@ import Base from '../layouts/Base.astro';
     .cta h2{color:#fff;font-size:clamp(26px,3.4vw,40px);max-width:20ch;margin:0 auto}
     .cta p{color:#C4D2C7;margin:14px auto 28px;max-width:46ch}
     .cta .btn-primary{background:var(--gold);color:var(--forest-deep)}
-    @media (max-width:860px){.tiers{grid-template-columns:1fr}}
+    .ai-section{padding:20px 0 80px}
+    .ai-section h2{font-size:clamp(26px,3.4vw,38px);max-width:22ch;margin-top:10px}
+    .ai-sub{color:var(--muted);margin:14px 0 36px;max-width:56ch;font-size:16px}
+    .ai-wedge{background:var(--forest-deep);color:#fff;border-radius:var(--radius);padding:26px 30px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;margin-bottom:14px}
+    .ai-wedge .ai-n{font-family:"Fraunces",serif;font-size:22px;color:var(--gold);font-weight:600}
+    .ai-wedge h3{color:#fff;font-size:19px;font-weight:500;margin:0 0 6px}
+    .ai-wedge .star{color:var(--gold);font-size:12px;font-weight:600;letter-spacing:.05em;margin-left:6px}
+    .ai-wedge p{color:#CDD9CF;font-size:14.5px;max-width:52ch}
+    .ai-price{font-family:"Fraunces",serif;font-size:26px;font-weight:600;text-align:right;white-space:nowrap}
+    .ai-price span{display:block;font-family:"Inter",sans-serif;font-size:12px;color:#B9C6BC;font-weight:400}
+    .ai-ladder{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .ai-row{display:grid;grid-template-columns:40px 160px 100px 1fr;gap:16px;align-items:center;padding:16px 24px;border-top:1px solid var(--line)}
+    .ai-row:first-child{border-top:none}
+    .ai-row .ai-n{font-family:"Fraunces",serif;color:var(--gold);font-weight:600;font-size:15px}
+    .ai-name{font-weight:500;font-size:15px}
+    .ai-name small{display:block;color:var(--muted);font-size:12px;font-weight:400}
+    .ai-p{font-family:"Fraunces",serif;font-weight:600;font-size:16px}
+    .ai-p small{font-family:"Inter",sans-serif;color:var(--muted);font-size:12px;font-weight:400}
+    .ai-d{color:var(--muted);font-size:13.5px}
+    .ai-model{background:var(--sage);border-radius:var(--radius);padding:24px 28px;margin:26px 0 28px}
+    .ai-model h4{font-family:"Fraunces",serif;font-weight:600;font-size:17px;margin:0 0 10px}
+    .ai-model ol{margin:0;padding-left:20px;color:var(--muted);font-size:14.5px}
+    .ai-model li{padding:3px 0}
+    @media (max-width:860px){
+      .tiers{grid-template-columns:1fr}
+      .ai-wedge{grid-template-columns:1fr}
+      .ai-price{text-align:left}
+      .ai-row{grid-template-columns:1fr;gap:4px;padding:14px 20px}
+    }
   </style>
 </Base>

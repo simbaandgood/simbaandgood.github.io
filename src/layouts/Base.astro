@@ -2,10 +2,29 @@
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+
 const {
-  title = 'Simba & Good — a pet lifecycle app',
-  description = 'Care for your pet through every stage of life. Breed- and age-aware guidance, and every membership helps fund animal welfare.',
+  title = 'Simba & Good — Seasons, the pet lifecycle app that gives back',
+  description = 'Seasons is the pet lifecycle app from Simba & Good: breed- and age-aware care guidance through every stage of your pet\u2019s life, with every membership helping fund animal welfare.',
+  path = '/',
+  image = '/images/og-default.jpg',
+  type = 'website',
+  structuredData = null,
 } = Astro.props;
+
+const site = 'https://simbaandgood.com';
+const canonical = new URL(path, site).toString();
+const ogImage = new URL(image, site).toString();
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Simba & Good',
+  url: site,
+  logo: new URL('/images/simba-and-good-wordmark.svg', site).toString(),
+  description: 'Simba & Good is a pet-industry company: Seasons, a pet lifecycle app; a marketing, product, and AI agency for pet businesses; and Shop for Good, a mission-driven storefront that funds animal welfare.',
+  sameAs: [],
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -14,6 +33,27 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="Simba & Good" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Structured data (AEO: helps LLM / answer-engine crawlers parse who/what this is) -->
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+    {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />

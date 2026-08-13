@@ -1,17 +1,35 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const title = 'Seasons — the pet lifecycle app by Simba & Good';
+const description = 'Seasons guides you through every stage of your pet\u2019s life with breed- and age-aware care — vaccinations, nutrition, milestones — and every membership helps fund animal welfare.';
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Seasons',
+  applicationCategory: 'LifestyleApplication',
+  operatingSystem: 'iOS',
+  description: 'A pet lifecycle app that adapts to your pet\u2019s breed and age, guiding you through vaccinations, nutrition, health checks, and milestones at every stage of life.',
+  offers: [
+    { '@type': 'Offer', name: 'Solo', price: '5.99', priceCurrency: 'USD' },
+    { '@type': 'Offer', name: 'Family', price: '11.99', priceCurrency: 'USD' },
+    { '@type': 'Offer', name: 'Supporter', price: '23.99', priceCurrency: 'USD' },
+  ],
+  publisher: { '@type': 'Organization', name: 'Simba & Good' },
+};
 ---
-<Base>
+<Base title={title} description={description} path="/" structuredData={appSchema}>
   <header class="hero"><div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">A pet lifecycle app</span>
+      <span class="eyebrow">Seasons — a pet lifecycle app by Simba &amp; Good</span>
       <h1>Be there for every stage of their life.</h1>
-      <p class="lead">Simba &amp; Good learns your pet's breed and age, then guides you through what matters at each stage — vaccinations, nutrition, health checks, and the small milestones in between.</p>
+      <p class="lead">Seasons learns your pet's breed and age, then guides you through what matters at each stage — vaccinations, nutrition, health checks, and the small milestones in between.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#join">Get early access</a>
         <a class="btn btn-ghost" href="#stages">See how it works</a>
       </div>
-      <p class="hero-note">🐾 70% of our profits go to animal welfare.</p>
+      <p class="hero-note">🐾 Our goal: give away 70% of profits to animal welfare.</p>
     </div>
     <div class="hero-img">
       <img src="/images/Simba.jpg" alt="Simba, a Bichon Frise and the heart of Simba &amp; Good" />
@@ -25,7 +43,7 @@ import Base from '../layouts/Base.astro';
   <section class="arc" id="stages"><div class="wrap">
     <span class="eyebrow">One app, their whole life</span>
     <h2>Guidance that grows up with them.</h2>
-    <p class="sub">A puppy, an adult, and a senior need completely different care — and a Great Dane ages nothing like a Chihuahua. Simba &amp; Good adjusts to your pet's breed and age, so you always know what's next.</p>
+    <p class="sub">A puppy, an adult, and a senior need completely different care — and a Great Dane ages nothing like a Chihuahua. Seasons adjusts to your pet's breed and age, so you always know what's next.</p>
     <div class="track">
       <div class="stage"><span class="dot"></span><div class="age">8 weeks</div><h3>New arrival</h3><p>First vaccines, vet setup, and getting the basics right from day one.</p></div>
       <div class="stage"><span class="dot"></span><div class="age">6 months</div><h3>Building habits</h3><p>Training, nutrition changes, and spay/neuter timing for their breed.</p></div>
@@ -41,7 +59,7 @@ import Base from '../layouts/Base.astro';
     <div class="steps">
       <div class="step"><div class="n">01</div><h3>Add your pet</h3><p>Breed, birthday, and a few details. That's all we need to start.</p></div>
       <div class="step"><div class="n">02</div><h3>Get a plan that fits</h3><p>Reminders and guidance tuned to their exact breed and age — never generic.</p></div>
-      <div class="step"><div class="n">03</div><h3>Do good, effortlessly</h3><p>Most of what Simba &amp; Good earns goes back to animals who need it.</p></div>
+      <div class="step"><div class="n">03</div><h3>Do good, effortlessly</h3><p>A share of what Seasons earns goes back to animals who need it.</p></div>
     </div>
   </div></section>
 
@@ -76,13 +94,13 @@ import Base from '../layouts/Base.astro';
     <div>
       <span class="eyebrow">The mission</span>
       <h2>Everyday care that gives back.</h2>
-      <p>Simba &amp; Good exists to make caring for your pet easier — and to turn a healthy business into real support for the animals who have no one. Rescue, veterinary care, and rehoming for strays and shelter animals.</p>
+      <p>Seasons exists to make caring for your pet easier — and to turn a healthy business into real support for the animals who have no one. Rescue, veterinary care, and rehoming for strays and shelter animals. Every subscription funds giving from day one, and it grows from there.</p>
       <span class="pill">🐾 Openly reported, every year.</span>
       <div class="mission-link"><a href="/welfare-plan">Read our full welfare plan →</a></div>
     </div>
     <div>
       <div class="give">70%</div>
-      <div class="give-label">of our profits go to animal welfare.</div>
+      <div class="give-label">is our goal for the share of profits going to animal welfare, over time.</div>
     </div>
   </div></section>
 
@@ -94,7 +112,7 @@ import Base from '../layouts/Base.astro';
 
   <section id="join"><div class="cta">
     <h2>Be there for their whole life.</h2>
-    <p>Join the early access list and we'll let you know the moment Simba &amp; Good is ready.</p>
+    <p>Join the early access list and we'll let you know the moment Seasons is ready.</p>
     <a class="btn btn-primary" href="/contact">Get early access</a>
   </div></section>
 

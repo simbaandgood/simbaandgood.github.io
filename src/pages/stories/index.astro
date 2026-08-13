@@ -5,7 +5,7 @@ const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
-<Base title="Stories — Simba & Good" description="Notes on pet care, our mission, and the animals we help.">
+<Base title="Stories — Simba & Good" description="Notes on pet care, our mission, and the animals we help." path="/stories">
   <header class="page-head"><div class="wrap">
     <span class="eyebrow">Stories</span>
     <h1>Notes on care and the mission.</h1>

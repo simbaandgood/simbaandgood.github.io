@@ -2,8 +2,18 @@
 import Base from './Base.astro';
 const { frontmatter } = Astro.props;
 const date = new Date(frontmatter.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: frontmatter.title,
+  description: frontmatter.description,
+  datePublished: frontmatter.pubDate,
+  author: { '@type': 'Organization', name: 'Simba & Good' },
+  publisher: { '@type': 'Organization', name: 'Simba & Good' },
+};
 ---
-<Base title={`${frontmatter.title} — Simba & Good`} description={frontmatter.description}>
+<Base title={`${frontmatter.title} — Simba & Good`} description={frontmatter.description} path={Astro.url.pathname} type="article" structuredData={articleSchema}>
   <article class="post">
     <div class="narrow">
       <a class="back" href="/stories">&larr; All stories</a>
