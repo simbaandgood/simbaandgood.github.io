@@ -1,11 +1,10 @@
 ---
 title: "Why we're building Simba & Good"
-
 description: "Why one little dog made us rethink pet care — and how we're building a business to help animals who have no one."
-
 pubDate: 2026-08-06
-
 tags: ["mission"]
+image: "/images/stories/simba-and-piyush.jpg"
+imageAlt: "Piyush with Simba, the Bichon Frise who inspired Simba & Good."
 ---
 
 <img

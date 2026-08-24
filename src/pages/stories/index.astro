@@ -54,33 +54,42 @@ const generalPosts = remainingPosts.filter(
   </header>
 
   {featuredPost && (
-    <section class="wrap featured-section">
-      <a class="featured-post" href={`/stories/${featuredPost.id}`}>
-        <div class="featured-media">
+  <section class="wrap featured-section">
+    <a class="featured-post" href={`/stories/${featuredPost.id}`}>
+      <div class="featured-media">
+        {featuredPost.data.image ? (
+          <img
+            src={featuredPost.data.image}
+            alt={
+              featuredPost.data.imageAlt ??
+              featuredPost.data.title
+            }
+          />
+        ) : (
           <div class="featured-media-inner">
             <span class="eyebrow">Our story</span>
-            <span class="media-placeholder">Story image</span>
           </div>
-        </div>
+        )}
+      </div>
 
-        <div class="featured-content">
-          <span class="date">
-            {featuredPost.data.pubDate.toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            })}
-          </span>
+      <div class="featured-content">
+        <span class="date">
+          {featuredPost.data.pubDate.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          })}
+        </span>
 
-          <h2>{featuredPost.data.title}</h2>
+        <h2>{featuredPost.data.title}</h2>
 
-          <p>{featuredPost.data.description}</p>
+        <p>{featuredPost.data.description}</p>
 
-          <span class="read">Read the story &rarr;</span>
-        </div>
-      </a>
-    </section>
-  )}
+        <span class="read">Read the story &rarr;</span>
+      </div>
+    </a>
+  </section>
+)}
 
   {sections.map((section) => {
     const sectionPosts = remainingPosts.filter((post) =>
