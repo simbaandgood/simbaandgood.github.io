@@ -10,7 +10,7 @@ tags: ["mission"]
 
 <img
   class="story-hero"
-  src="/images/stories/simba-and-piyush.jpeg"
+  src="/images/stories/Simba-and-Piyush.jpeg"
   alt="Piyush with Simba, the Bichon Frise who inspired Simba & Good."
 />
 
