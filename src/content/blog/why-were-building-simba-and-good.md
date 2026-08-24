@@ -9,17 +9,10 @@ tags: ["mission"]
 ---
 
 <img
-  src="./simba-and-piyush.jpeg"
-  alt="Piyush with Simba, the Bichon Frise who inspired Simba & Good."
   class="story-hero"
+  src="/images/stories/simba-and-piyush.jpeg"
+  alt="Piyush with Simba, the Bichon Frise who inspired Simba & Good."
 />
-
-<div class="story-media-placeholder">
-  <div class="story-media-placeholder__inner">
-    <span class="eyebrow">Our story</span>
-    <p>Photo of Simba & me</p>
-  </div>
-</div>
 
 Simba is a Bichon Frise, and the reason this company exists.
 
