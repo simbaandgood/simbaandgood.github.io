@@ -52,7 +52,13 @@ footer .brand{font-size:17px}
 
 
 /* Story media */
-
+.story-hero {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: 0 0 3rem;
+}
 .story-media-placeholder {
   aspect-ratio: 16 / 9;
   border-radius: var(--radius);

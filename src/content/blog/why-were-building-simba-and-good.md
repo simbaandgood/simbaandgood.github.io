@@ -8,16 +8,16 @@ pubDate: 2026-08-06
 tags: ["mission"]
 ---
 
-<!-- HERO MEDIA PLACEHOLDER
-     Replace this with a photo or video of Piyush & Simba.
-     Recommended: wide 16:9 image/video with rounded corners.
-     Suggested alt: "Piyush with Simba, the Bichon Frise who inspired Simba & Good."
--->
+<img
+  src="./simba-and-piyush.jpeg"
+  alt="Piyush with Simba, the Bichon Frise who inspired Simba & Good."
+  class="story-hero"
+/>
 
 <div class="story-media-placeholder">
   <div class="story-media-placeholder__inner">
     <span class="eyebrow">Our story</span>
-    <p>Photo or video of Simba & me</p>
+    <p>Photo of Simba & me</p>
   </div>
 </div>
 
