@@ -13,22 +13,30 @@ import Base from '../layouts/Base.astro';
       <span class="kind">Pet owners</span>
       <h2>Get early access</h2>
       <p>Be first to know when Seasons launches. No spam — just one email when it's ready.</p>
-      <form class="signup" action="https://formspree.io/f/REPLACE_ME" method="POST">
-        <input type="email" name="email" placeholder="you@email.com" required />
-        <button type="submit" class="btn btn-primary">Notify me</button>
-      </form>
+      <a class="btn btn-primary" href="https://tally.so/r/q48YO2" target="_blank" rel="noopener">Join the waitlist</a>
     </div>
     <div class="card dark">
       <span class="kind">Brands</span>
       <h2>Work with us</h2>
       <p>Marketing, product &amp; design, or AI for your pet business. Tell us what you're building and we'll come back with a plan.</p>
-      <a class="btn btn-primary" href="mailto:hello@simbaandgood.com?subject=Working%20with%20Simba%20%26%20Good">Book a call</a>
+      <a class="btn btn-primary" href="https://calendly.com/piyushsinha/simba-and-good-for-brands-intro-call" target="_blank" rel="noopener">Book a call</a>
     </div>
   </div></section>
 
   <section class="direct"><div class="wrap">
-    <p>Or reach us directly at <a href="mailto:hello@simbaandgood.com">hello@simbaandgood.com</a></p>
+    <p>Or reach us directly at <a class="email-link" href="#" data-user="hello" data-domain="simbaandgood.com" aria-label="Email us">(loading…)</a></p>
   </div></section>
+
+  <script>
+    document.querySelectorAll('.email-link').forEach((el) => {
+      const user = el.getAttribute('data-user');
+      const domain = el.getAttribute('data-domain');
+      if (!user || !domain) return;
+      const address = user + '@' + domain;
+      el.setAttribute('href', 'mailto:' + address);
+      el.textContent = address;
+    });
+  </script>
 
   <style>
     .page-head{padding:66px 0 12px}
@@ -42,9 +50,6 @@ import Base from '../layouts/Base.astro';
     .card.dark h2{color:#fff}
     .card p{color:var(--muted);font-size:15px;margin-bottom:22px}
     .card.dark p{color:#B9C6BC}
-    .signup{display:flex;gap:10px;flex-wrap:wrap}
-    .signup input{flex:1;min-width:180px;padding:12px 16px;border-radius:999px;border:1px solid var(--line);font-family:inherit;font-size:15px;background:var(--paper)}
-    .signup input:focus{outline:2px solid var(--forest);outline-offset:1px}
     .card.dark .btn-primary{background:var(--gold);color:var(--forest-deep)}
     .direct{padding:20px 0 80px;text-align:center}
     .direct p{color:var(--muted);font-size:15px}
