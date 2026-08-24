@@ -51,11 +51,12 @@ footer .brand{font-size:17px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
 
 
-/* Impact card */
+/* Story media */
+
 .story-media-placeholder {
   aspect-ratio: 16 / 9;
-  border-radius: 24px;
-  background: var(--surface-soft);
+  border-radius: var(--radius);
+  background: var(--sage);
   display: grid;
   place-items: center;
   margin: 0 0 3rem;
@@ -69,32 +70,41 @@ footer .brand{font-size:17px}
 
 .story-media-placeholder__inner p {
   margin: .5rem 0 0;
-  color: var(--text-muted);
+  color: var(--muted);
 }
+
+/* Impact card */
 
 .impact-card {
   margin: 3rem 0;
   padding: clamp(1.5rem, 4vw, 3rem);
-  border-radius: 24px;
-  background: var(--surface-soft);
+  border-radius: var(--radius);
+  background: var(--sage);
+  border: 1px solid var(--line);
 }
 
 .impact-card__number {
+  font-family: "Fraunces", Georgia, serif;
   font-size: clamp(4rem, 12vw, 8rem);
   line-height: .9;
   letter-spacing: -.06em;
-  font-weight: 600;
+  font-weight: 500;
+  color: var(--forest);
   margin: 1.5rem 0 .75rem;
 }
 
 .impact-card h3 {
   margin: 0;
+  font-family: "Fraunces", Georgia, serif;
   font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  color: var(--ink);
 }
 
 .impact-card p {
   max-width: 38rem;
   margin: 1rem 0 0;
+  color: var(--muted);
 }
 
 .impact-card__footer {
@@ -104,7 +114,7 @@ footer .brand{font-size:17px}
   gap: 1rem;
   margin-top: 2rem;
   padding-top: 1rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
   font-size: .9rem;
-  color: var(--text-muted);
+  color: var(--muted);
 }
