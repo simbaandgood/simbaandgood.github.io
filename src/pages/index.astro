@@ -2,13 +2,13 @@
 import Base from '../layouts/Base.astro';
 
 const title = 'Simba & Good — Better care for the pets we love, and the ones who need it';
-const description = 'Simba & Good is a pet-industry company: Seasons, a pet lifecycle app; Shop for Good, a mission-driven storefront; and an agency for pet businesses — all funding animal welfare.';
+const description = 'Simba & Good is a pet-industry company: Seasons, a pet lifecycle app; Shop for Good, a mission-driven storefront; an agency for pet businesses; and pet-friendly venue consulting — all funding animal welfare.';
 ---
 <Base title={title} description={description} path="/">
   <header class="hero"><div class="wrap">
     <span class="eyebrow">Simba &amp; Good</span>
     <h1>Better care for the pets we love. Real help for the ones who don't have anyone yet.</h1>
-    <p class="lead">We build a pet lifecycle app, a mission-driven storefront, and an agency for pet businesses — three different ways in, one shared purpose: everyday pet care that funds animal welfare.</p>
+    <p class="lead">We build a pet lifecycle app, a mission-driven storefront, an agency for pet businesses, and pet-friendly venue consulting — four different ways in, one shared purpose: everyday pet care that funds animal welfare.</p>
   </div></header>
 
   <section class="funnel"><div class="wrap">
@@ -29,6 +29,12 @@ const description = 'Simba & Good is a pet-industry company: Seasons, a pet life
       <h2>For Brands</h2>
       <p>Marketing, product &amp; design, and provider-neutral AI — built for the pet industry. Fixed monthly scope, no surprise invoices.</p>
       <a class="btn btn-primary" href="/for-brands">See our services →</a>
+    </div>
+    <div class="offer offer-dark">
+      <span class="tag">Physical spaces</span>
+      <h2>For Venues</h2>
+      <p>Pet-friendly audits, hands-on fixes, and a verified certification badge — for cafes, hotels, retail, offices, and more.</p>
+      <a class="btn btn-primary" href="/for-venues">See our services →</a>
     </div>
   </div></section>
 
@@ -60,6 +66,7 @@ const description = 'Simba & Good is a pet-industry company: Seasons, a pet life
       <a class="btn btn-primary" href="/seasons">Seasons app</a>
       <a class="btn btn-ghost-dark" href="/shop">Shop for Good</a>
       <a class="btn btn-ghost-dark" href="/for-brands">For brands</a>
+      <a class="btn btn-ghost-dark" href="/for-venues">For venues</a>
     </div>
   </div></section>
 
@@ -69,11 +76,11 @@ const description = 'Simba & Good is a pet-industry company: Seasons, a pet life
     .hero h1{font-size:clamp(34px,5vw,54px);margin:18px auto 22px;max-width:20ch}
     .hero .lead{font-size:18.5px;color:var(--muted);max-width:56ch;margin:0 auto}
     .funnel{padding:10px 0 80px}
-    .funnel .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-    .offer{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px;display:flex;flex-direction:column}
+    .funnel .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .offer{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column}
     .offer-dark{background:var(--forest-deep);color:#fff;border-color:var(--forest-deep)}
     .offer .tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
-    .offer h2{font-family:"Fraunces",serif;font-size:28px;font-weight:600;margin:12px 0 10px}
+    .offer h2{font-family:"Fraunces",serif;font-size:24px;font-weight:600;margin:12px 0 10px}
     .offer-dark h2{color:#fff}
     .offer p{color:var(--muted);font-size:15px;flex:1;margin-bottom:24px}
     .offer-dark p{color:#CDD9CF}
@@ -100,8 +107,14 @@ const description = 'Simba & Good is a pet-industry company: Seasons, a pet life
     .cta .btn-primary:hover{box-shadow:0 8px 22px rgba(201,146,66,.35)}
     .btn-ghost-dark{border:1px solid rgba(255,255,255,.35);color:#fff;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px}
     .btn-ghost-dark:hover{background:rgba(255,255,255,.08)}
+    @media (max-width:980px){
+      .funnel .wrap{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .funnel .wrap{grid-template-columns:1fr}
+    }
     @media (max-width:860px){
-      .funnel .wrap,.mission-grid{grid-template-columns:1fr}
+      .mission-grid{grid-template-columns:1fr}
     }
   </style>
 </Base>
