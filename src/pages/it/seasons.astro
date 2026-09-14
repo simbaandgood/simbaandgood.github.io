@@ -1,8 +1,8 @@
 ---
-import Base from '../layouts/Base.astro';
+import Base from '../../layouts/Base.astro';
 
-const title = 'Seasons — the pet lifecycle app by Simba & Good';
-const description = 'Seasons guides you through every stage of your pet\u2019s life with breed- and age-aware care — vaccinations, nutrition, milestones — and every membership helps fund animal welfare.';
+const title = 'Seasons — l’app per il ciclo di vita del tuo animale, di Simba & Good';
+const description = 'Seasons ti guida in ogni fase della vita del tuo animale con cure basate su razza ed età — vaccinazioni, alimentazione, tappe — e ogni abbonamento contribuisce al benessere animale.';
 
 const appSchema = {
   '@context': 'https://schema.org',
@@ -19,17 +19,17 @@ const appSchema = {
   publisher: { '@type': 'Organization', name: 'Simba & Good' },
 };
 ---
-<Base title={title} description={description} path="/seasons" structuredData={appSchema}>
+<Base title={title} description={description} path="/seasons" lang="it" structuredData={appSchema}>
   <header class="hero"><div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Seasons — a pet lifecycle app by Simba &amp; Good</span>
-      <h1>Be there for every stage of their life.</h1>
-      <p class="lead">Seasons learns your pet's breed and age, then guides you through what matters at each stage — vaccinations, nutrition, health checks, and the small milestones in between.</p>
+      <span class="eyebrow">Seasons — l’app per il ciclo di vita del tuo animale, di Simba &amp; Good</span>
+      <h1>Ci siamo per ogni fase della sua vita.</h1>
+      <p class="lead">Seasons impara razza ed età del tuo animale, poi ti guida su ciò che conta in ogni fase — vaccinazioni, alimentazione, controlli di salute e le piccole tappe intermedie.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://tally.so/r/q48YO2">Get early access</a>
-        <a class="btn btn-ghost" href="#stages">See how it works</a>
+        <a class="btn btn-primary" href="https://tally.so/r/q48YO2">Accesso anticipato</a>
+        <a class="btn btn-ghost" href="#stages">Scopri come funziona</a>
       </div>
-      <p class="hero-note">🐾 Our goal: give away 70% of profits to animal welfare.</p>
+      <p class="hero-note">🐾 Il nostro obiettivo: donare il 70% dei profitti al benessere animale.</p>
     </div>
     <div class="hero-img icon-frame">
       <img src="/images/seasons-app-icon.png" alt="The Seasons app icon" />
@@ -37,73 +37,73 @@ const appSchema = {
   </div></header>
 
   <section class="arc" id="stages"><div class="wrap">
-    <span class="eyebrow">One app, their whole life</span>
-    <h2>Guidance that grows up with them.</h2>
-    <p class="sub">A puppy, an adult, and a senior need completely different care — and a Great Dane ages nothing like a Chihuahua. Seasons adjusts to your pet's breed and age, so you always know what's next.</p>
+    <span class="eyebrow">Un’app, tutta la sua vita</span>
+    <h2>Una guida che cresce con lui.</h2>
+    <p class="sub">Un cucciolo, un adulto e un anziano hanno bisogno di cure completamente diverse — e un alano invecchia in modo molto diverso da un chihuahua. Seasons si adatta a razza ed età del tuo animale, così sai sempre cosa viene dopo.</p>
     <div class="track">
-      <div class="stage"><span class="dot"></span><div class="age">8 weeks</div><h3>New arrival</h3><p>First vaccines, vet setup, and getting the basics right from day one.</p></div>
-      <div class="stage"><span class="dot"></span><div class="age">6 months</div><h3>Building habits</h3><p>Training, nutrition changes, and spay/neuter timing for their breed.</p></div>
-      <div class="stage"><span class="dot"></span><div class="age">1–7 years</div><h3>Prime years</h3><p>Boosters, dental care, and weight tracking to keep them thriving.</p></div>
-      <div class="stage"><span class="dot"></span><div class="age">7+ years</div><h3>Senior care</h3><p>Earlier for large breeds — screenings, mobility, and comfort.</p></div>
-      <div class="stage"><span class="dot"></span><div class="age">A full life</div><h3>Every memory</h3><p>Records, milestones, and a history that stays with them for good.</p></div>
+      <div class="stage"><span class="dot"></span><div class="age">8 settimane</div><h3>Nuovo arrivo</h3><p>Primi vaccini, scelta del veterinario, e le basi giuste fin dal primo giorno.</p></div>
+      <div class="stage"><span class="dot"></span><div class="age">6 mesi</div><h3>Costruire abitudini</h3><p>Addestramento, cambi alimentari, e il momento giusto per la sterilizzazione in base alla razza.</p></div>
+      <div class="stage"><span class="dot"></span><div class="age">1–7 anni</div><h3>Gli anni migliori</h3><p>Richiami vaccinali, cura dentale, e monitoraggio del peso per tenerlo in forma.</p></div>
+      <div class="stage"><span class="dot"></span><div class="age">7+ anni</div><h3>Cura senior</h3><p>Prima per le razze grandi — controlli, mobilità e comfort.</p></div>
+      <div class="stage"><span class="dot"></span><div class="age">Una vita piena</div><h3>Ogni ricordo</h3><p>Registri, tappe, e una storia che resta con lui per sempre.</p></div>
     </div>
   </div></section>
 
   <section class="section"><div class="wrap">
-    <span class="eyebrow">How it works</span>
-    <h2>Set it up once. We'll handle the timing.</h2>
+    <span class="eyebrow">Come funziona</span>
+    <h2>Configuralo una volta. Ai tempi pensiamo noi.</h2>
     <div class="steps">
-      <div class="step"><div class="n">01</div><h3>Add your pet</h3><p>Breed, birthday, and a few details. That's all we need to start.</p></div>
-      <div class="step"><div class="n">02</div><h3>Get a plan that fits</h3><p>Reminders and guidance tuned to their exact breed and age — never generic.</p></div>
-      <div class="step"><div class="n">03</div><h3>Do good, effortlessly</h3><p>A share of what Seasons earns goes back to animals who need it.</p></div>
+      <div class="step"><div class="n">01</div><h3>Aggiungi il tuo animale</h3><p>Razza, compleanno e qualche dettaglio. È tutto ciò che ci serve per iniziare.</p></div>
+      <div class="step"><div class="n">02</div><h3>Ricevi un piano su misura</h3><p>Promemoria e indicazioni calibrati sulla sua razza ed età esatte — mai generici.</p></div>
+      <div class="step"><div class="n">03</div><h3>Fai del bene, senza sforzo</h3><p>Una parte di ciò che Seasons guadagna torna agli animali che ne hanno bisogno.</p></div>
     </div>
   </div></section>
 
   <section class="pricing" id="pricing"><div class="wrap">
-    <span class="eyebrow">Simple pricing</span>
-    <h2>One membership. Their whole life covered.</h2>
-    <p class="psub">Every plan starts with a 7-day free trial. Cancel anytime.</p>
+    <span class="eyebrow">Prezzi semplici</span>
+    <h2>Un abbonamento. Tutta la sua vita coperta.</h2>
+    <p class="psub">Ogni piano inizia con una prova gratuita di 7 giorni. Annulla quando vuoi.</p>
     <div class="plans">
       <div class="plan">
         <div class="pname">Solo</div>
-        <div class="pprice">$5.99<span>/mo</span></div>
-        <div class="pmeta">One dog</div>
-        <ul><li>Full breed &amp; age-aware care plan</li><li>Smart reminders for every stage</li><li>Health &amp; vaccination records</li></ul>
+        <div class="pprice">$5.99<span>/mese</span></div>
+        <div class="pmeta">Un cane</div>
+        <ul><li>Piano di cura completo per razza ed età</li><li>Promemoria intelligenti per ogni fase</li><li>Registri sanitari e vaccinali</li></ul>
       </div>
       <div class="plan feature">
         <div class="pname">Family</div>
-        <div class="pprice">$11.99<span>/mo</span></div>
-        <div class="pmeta">Up to 5 dogs · shared with family</div>
-        <ul><li>Everything in Solo</li><li>Up to five dogs</li><li>Share with the whole household</li></ul>
+        <div class="pprice">$11.99<span>/mese</span></div>
+        <div class="pmeta">Fino a 5 cani · condiviso in famiglia</div>
+        <ul><li>Tutto ciò che include Solo</li><li>Fino a cinque cani</li><li>Condividi con tutta la famiglia</li></ul>
       </div>
       <div class="plan">
         <div class="pname">Supporter</div>
-        <div class="pprice">$23.99<span>/mo</span></div>
-        <div class="pmeta">Up to 5 dogs · gives more back</div>
-        <ul><li>Everything in Family</li><li>Funds significantly more welfare</li><li>Supporter badge &amp; impact updates</li></ul>
+        <div class="pprice">$23.99<span>/mese</span></div>
+        <div class="pmeta">Fino a 5 cani · dona di più</div>
+        <ul><li>Tutto ciò che include Family</li><li>Finanzia molto più benessere animale</li><li>Badge Supporter e aggiornamenti sull’impatto</li></ul>
       </div>
     </div>
-    <p class="pnote">🐾 Every plan helps fund animal welfare — Supporter simply gives more.</p>
+    <p class="pnote">🐾 Ogni piano contribuisce al benessere animale — Supporter dona semplicemente di più.</p>
   </div></section>
 
   <section class="mission" id="mission"><div class="wrap mission-grid">
     <div>
-      <span class="eyebrow">The mission</span>
-      <h2>Everyday care that gives back.</h2>
-      <p>Seasons exists to make caring for your pet easier — and to turn a healthy business into real support for the animals who have no one. Rescue, veterinary care, and rehoming for strays and shelter animals. Every subscription funds giving from day one, and it grows from there.</p>
-      <span class="pill">🐾 Openly reported, every year.</span>
-      <div class="mission-link"><a href="/welfare-plan">Read our full welfare plan →</a></div>
+      <span class="eyebrow">La missione</span>
+      <h2>Una cura quotidiana che restituisce.</h2>
+      <p>Seasons esiste per rendere più semplice la cura del tuo animale — e trasformare un’attività sana in un aiuto reale per gli animali che non hanno nessuno. Salvataggio, cure veterinarie e reinserimento per randagi e animali dei rifugi. Ogni abbonamento finanzia questo aiuto fin dal primo giorno, e continua a crescere.</p>
+      <span class="pill">🐾 Rendicontato apertamente, ogni anno.</span>
+      <div class="mission-link"><a href="/it/welfare-plan">Leggi il nostro piano completo per il benessere animale →</a></div>
     </div>
     <div>
       <div class="give">70%</div>
-      <div class="give-label">is our goal for the share of profits going to animal welfare, over time.</div>
+      <div class="give-label">è il nostro obiettivo per la quota di profitti destinata al benessere animale, nel tempo.</div>
     </div>
   </div></section>
 
   <section id="join"><div class="cta">
-    <h2>Be there for their whole life.</h2>
-    <p>Join the early access list and we'll let you know the moment Seasons is ready.</p>
-    <a class="btn btn-primary" href="https://tally.so/r/q48YO2">Get early access</a>
+    <h2>Ci siamo per tutta la sua vita.</h2>
+    <p>Iscriviti alla lista per l’accesso anticipato e ti avviseremo appena Seasons sarà pronto.</p>
+    <a class="btn btn-primary" href="https://tally.so/r/q48YO2">Accesso anticipato</a>
   </div></section>
 
   <style>

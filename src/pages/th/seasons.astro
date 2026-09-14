@@ -1,0 +1,176 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = 'Seasons — แอปดูแลสัตว์เลี้ยงตลอดช่วงชีวิต โดย Simba & Good';
+const description = 'Seasons พาคุณผ่านทุกช่วงชีวิตของสัตว์เลี้ยงด้วยการดูแลที่คำนึงถึงสายพันธุ์และอายุ — วัคซีน โภชนาการ เหตุการณ์สำคัญ — และทุกสมาชิกภาพช่วยสนับสนุนสวัสดิภาพสัตว์';
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Seasons',
+  applicationCategory: 'LifestyleApplication',
+  operatingSystem: 'iOS',
+  description: 'A pet lifecycle app that adapts to your pet\u2019s breed and age, guiding you through vaccinations, nutrition, health checks, and milestones at every stage of life.',
+  offers: [
+    { '@type': 'Offer', name: 'Solo', price: '5.99', priceCurrency: 'USD' },
+    { '@type': 'Offer', name: 'Family', price: '11.99', priceCurrency: 'USD' },
+    { '@type': 'Offer', name: 'Supporter', price: '23.99', priceCurrency: 'USD' },
+  ],
+  publisher: { '@type': 'Organization', name: 'Simba & Good' },
+};
+---
+<Base title={title} description={description} path="/seasons" lang="th" structuredData={appSchema}>
+  <header class="hero"><div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Seasons — แอปดูแลสัตว์เลี้ยงตลอดช่วงชีวิต โดย Simba &amp; Good</span>
+      <h1>อยู่เคียงข้างทุกช่วงชีวิตของพวกเขา</h1>
+      <p class="lead">Seasons จะเรียนรู้สายพันธุ์และอายุของสัตว์เลี้ยงคุณ แล้วแนะนำสิ่งสำคัญในแต่ละช่วง — วัคซีน โภชนาการ การตรวจสุขภาพ และเหตุการณ์สำคัญเล็ก ๆ ระหว่างทาง</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://tally.so/r/q48YO2">รับสิทธิ์เข้าถึงก่อนใคร</a>
+        <a class="btn btn-ghost" href="#stages">ดูวิธีการทำงาน</a>
+      </div>
+      <p class="hero-note">🐾 เป้าหมายของเรา: บริจาค 70% ของกำไรเพื่อสวัสดิภาพสัตว์</p>
+    </div>
+    <div class="hero-img icon-frame">
+      <img src="/images/seasons-app-icon.png" alt="The Seasons app icon" />
+    </div>
+  </div></header>
+
+  <section class="arc" id="stages"><div class="wrap">
+    <span class="eyebrow">แอปเดียว ตลอดชีวิตของพวกเขา</span>
+    <h2>คำแนะนำที่เติบโตไปพร้อมกับพวกเขา</h2>
+    <p class="sub">ลูกสัตว์ ตัวเต็มวัย และสัตว์สูงวัยต้องการการดูแลที่แตกต่างกันโดยสิ้นเชิง — และเกรทเดนก็แก่ตัวไม่เหมือนชิวาวาเลย Seasons ปรับตามสายพันธุ์และอายุของสัตว์เลี้ยงคุณ คุณจึงรู้เสมอว่าขั้นตอนต่อไปคืออะไร</p>
+    <div class="track">
+      <div class="stage"><span class="dot"></span><div class="age">8 สัปดาห์</div><h3>สมาชิกใหม่มาถึง</h3><p>วัคซีนแรก การเลือกสัตวแพทย์ และการเริ่มต้นพื้นฐานให้ถูกต้องตั้งแต่วันแรก</p></div>
+      <div class="stage"><span class="dot"></span><div class="age">6 เดือน</div><h3>สร้างนิสัยที่ดี</h3><p>การฝึก การเปลี่ยนอาหาร และจังหวะเวลาที่เหมาะสมสำหรับการทำหมันตามสายพันธุ์</p></div>
+      <div class="stage"><span class="dot"></span><div class="age">1–7 ปี</div><h3>ช่วงวัยที่ดีที่สุด</h3><p>วัคซีนกระตุ้น การดูแลช่องปาก และติดตามน้ำหนักเพื่อให้แข็งแรงสมบูรณ์</p></div>
+      <div class="stage"><span class="dot"></span><div class="age">7 ปีขึ้นไป</div><h3>การดูแลวัยชรา</h3><p>เริ่มเร็วขึ้นสำหรับสายพันธุ์ใหญ่ — การตรวจคัดกรอง การเคลื่อนไหว และความสบายตัว</p></div>
+      <div class="stage"><span class="dot"></span><div class="age">ตลอดชีวิต</div><h3>ทุกความทรงจำ</h3><p>บันทึก เหตุการณ์สำคัญ และประวัติที่อยู่กับพวกเขาตลอดไป</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="wrap">
+    <span class="eyebrow">วิธีการทำงาน</span>
+    <h2>ตั้งค่าครั้งเดียว เราจัดการเรื่องจังหวะเวลาให้</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>เพิ่มข้อมูลสัตว์เลี้ยงของคุณ</h3><p>สายพันธุ์ วันเกิด และรายละเอียดเล็กน้อย แค่นี้ก็เพียงพอสำหรับการเริ่มต้น</p></div>
+      <div class="step"><div class="n">02</div><h3>รับแผนที่เหมาะกับพวกเขา</h3><p>การแจ้งเตือนและคำแนะนำที่ปรับตามสายพันธุ์และอายุที่แน่นอน — ไม่ใช่แบบทั่วไป</p></div>
+      <div class="step"><div class="n">03</div><h3>ทำความดีได้อย่างไม่ต้องพยายาม</h3><p>รายได้ส่วนหนึ่งของ Seasons กลับคืนสู่สัตว์ที่ต้องการความช่วยเหลือ</p></div>
+    </div>
+  </div></section>
+
+  <section class="pricing" id="pricing"><div class="wrap">
+    <span class="eyebrow">ราคาที่เข้าใจง่าย</span>
+    <h2>สมาชิกภาพเดียว ครอบคลุมตลอดชีวิตของพวกเขา</h2>
+    <p class="psub">ทุกแผนเริ่มต้นด้วยทดลองใช้ฟรี 7 วัน ยกเลิกได้ทุกเมื่อ</p>
+    <div class="plans">
+      <div class="plan">
+        <div class="pname">Solo</div>
+        <div class="pprice">$5.99<span>/เดือน</span></div>
+        <div class="pmeta">สุนัข 1 ตัว</div>
+        <ul><li>แผนดูแลครบถ้วนตามสายพันธุ์และอายุ</li><li>การแจ้งเตือนอัจฉริยะสำหรับทุกช่วง</li><li>บันทึกสุขภาพและวัคซีน</li></ul>
+      </div>
+      <div class="plan feature">
+        <div class="pname">Family</div>
+        <div class="pprice">$11.99<span>/เดือน</span></div>
+        <div class="pmeta">สุนัขได้สูงสุด 5 ตัว · แชร์กับครอบครัว</div>
+        <ul><li>ทุกอย่างในแผน Solo</li><li>สุนัขได้สูงสุดห้าตัว</li><li>แชร์กับทั้งครอบครัวได้</li></ul>
+      </div>
+      <div class="plan">
+        <div class="pname">Supporter</div>
+        <div class="pprice">$23.99<span>/เดือน</span></div>
+        <div class="pmeta">สุนัขได้สูงสุด 5 ตัว · บริจาคมากขึ้น</div>
+        <ul><li>ทุกอย่างในแผน Family</li><li>สนับสนุนสวัสดิภาพสัตว์มากขึ้นอย่างมีนัยสำคัญ</li><li>ตราสัญลักษณ์ Supporter และอัปเดตผลกระทบ</li></ul>
+      </div>
+    </div>
+    <p class="pnote">🐾 ทุกแผนช่วยสนับสนุนสวัสดิภาพสัตว์ — แผน Supporter เพียงแค่บริจาคมากกว่า</p>
+  </div></section>
+
+  <section class="mission" id="mission"><div class="wrap mission-grid">
+    <div>
+      <span class="eyebrow">พันธกิจ</span>
+      <h2>การดูแลในชีวิตประจำวันที่ส่งต่อสิ่งดี ๆ กลับคืน</h2>
+      <p>Seasons มีอยู่เพื่อให้การดูแลสัตว์เลี้ยงของคุณง่ายขึ้น และเปลี่ยนธุรกิจที่ดีต่อสุขภาพให้กลายเป็นความช่วยเหลือที่แท้จริงสำหรับสัตว์ที่ไม่มีใครดูแล ทั้งการช่วยเหลือ การรักษาทางสัตวแพทย์ และการหาบ้านใหม่ให้สัตว์จรจัดและสัตว์ในสถานสงเคราะห์ ทุกการสมัครสมาชิกสนับสนุนการให้ตั้งแต่วันแรก และเติบโตขึ้นเรื่อย ๆ</p>
+      <span class="pill">🐾 รายงานอย่างเปิดเผยทุกปี</span>
+      <div class="mission-link"><a href="/th/welfare-plan">อ่านแผนสวัสดิภาพสัตว์ฉบับเต็มของเรา →</a></div>
+    </div>
+    <div>
+      <div class="give">70%</div>
+      <div class="give-label">คือเป้าหมายของเราสำหรับสัดส่วนกำไรที่จะมอบให้สวัสดิภาพสัตว์ เมื่อเวลาผ่านไป</div>
+    </div>
+  </div></section>
+
+  <section id="join"><div class="cta">
+    <h2>อยู่เคียงข้างพวกเขาตลอดชีวิต</h2>
+    <p>เข้าร่วมรายชื่อผู้รับสิทธิ์เข้าถึงก่อนใคร แล้วเราจะแจ้งให้คุณทราบทันทีที่ Seasons พร้อมใช้งาน</p>
+    <a class="btn btn-primary" href="https://tally.so/r/q48YO2">รับสิทธิ์เข้าถึงก่อนใคร</a>
+  </div></section>
+
+  <style>
+    .hero{padding:72px 0 40px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+    .hero h1{font-size:clamp(38px,5.4vw,64px);margin:18px 0 20px}
+    .hero .lead{font-size:19px;color:var(--muted);max-width:32ch;margin-bottom:30px}
+    .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+    .hero-note{font-size:13.5px;color:var(--muted);margin-top:18px}
+    .hero-img{position:relative}
+    .hero-img img{width:100%;border-radius:var(--radius);aspect-ratio:4/5;object-fit:cover;box-shadow:0 30px 60px -30px rgba(23,50,41,.45)}
+    .hero-img.icon-frame{max-width:380px;margin:0 auto}
+    .hero-img.icon-frame img{aspect-ratio:1/1;object-fit:cover;border-radius:22%}
+    .arc{background:var(--forest-deep);color:#F3F0E8;padding:74px 0;margin-top:36px}
+    .arc h2{color:#fff;font-size:clamp(28px,3.6vw,40px);max-width:16ch}
+    .arc .eyebrow{color:var(--gold)}
+    .arc .sub{color:#B9C6BC;margin:16px 0 46px;max-width:52ch;font-size:16.5px}
+    .track{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+    .track:before{content:"";position:absolute;left:6%;right:6%;top:11px;height:2px;background:linear-gradient(90deg,#3a6152,var(--gold),#3a6152)}
+    .stage{position:relative;padding-top:34px}
+    .dot{position:absolute;top:4px;left:0;width:16px;height:16px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(201,146,66,.18)}
+    .stage .age{font-family:var(--font-heading);font-size:15px;color:var(--gold);font-weight:600}
+    .stage h3{font-size:17px;color:#fff;margin:4px 0 6px;font-weight:500}
+    .stage p{font-size:13.5px;color:#AEBDB1;line-height:1.5}
+    .section{padding:80px 0}
+    .section h2{font-size:clamp(28px,3.6vw,42px);max-width:18ch}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}
+    .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+    .step .n{font-family:var(--font-heading);font-size:22px;color:var(--gold);font-weight:600}
+    .step h3{font-size:19px;margin:14px 0 8px;font-weight:500}
+    .step p{color:var(--muted);font-size:15px}
+    .pricing{padding:80px 0}
+    .pricing h2{font-size:clamp(28px,3.6vw,42px);max-width:18ch}
+    .psub{color:var(--muted);margin:14px 0 40px;font-size:16.5px}
+    .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .plan{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column}
+    .plan.feature{background:var(--forest-deep);color:#fff;border-color:var(--forest-deep)}
+    .pname{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+    .pprice{font-family:var(--font-heading);font-size:40px;font-weight:600;margin:12px 0 2px}
+    .pprice span{font-size:16px;color:var(--muted)}
+    .plan.feature .pprice span{color:#B9C6BC}
+    .pmeta{font-size:14px;color:var(--muted);margin-bottom:16px}
+    .plan.feature .pmeta{color:#B9C6BC}
+    .plan ul{list-style:none;padding:0;margin:8px 0 0}
+    .plan li{font-size:14.5px;color:var(--muted);padding:7px 0 7px 22px;position:relative}
+    .plan.feature li{color:#CDD9CF}
+    .plan li:before{content:"🐾";position:absolute;left:0;font-size:11px;top:8px}
+    .pnote{text-align:center;color:var(--muted);font-size:14.5px;margin-top:30px}
+    .mission{background:var(--sage);padding:78px 0}
+    .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+    .mission h2{font-size:clamp(26px,3.4vw,38px);max-width:16ch}
+    .mission p{color:var(--muted);margin-top:18px;font-size:16.5px;max-width:46ch}
+    .give{font-family:var(--font-heading);font-size:clamp(40px,6vw,72px);color:var(--forest);font-weight:600;line-height:1;margin-top:8px}
+    .give-label{color:var(--muted);font-size:15px;margin-top:6px}
+    .mission .pill{display:inline-flex;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:14px;font-weight:500;margin-top:24px}
+    .mission-link{margin-top:22px}
+    .mission-link a{color:var(--forest);font-weight:600;text-decoration:none}
+    .cta{background:var(--forest);color:#fff;border-radius:26px;padding:56px;text-align:center;margin:0 auto 80px;max-width:var(--wrap)}
+    .cta h2{color:#fff;font-size:clamp(28px,3.6vw,42px);max-width:20ch;margin:0 auto}
+    .cta p{color:#C4D2C7;margin:16px auto 30px;max-width:44ch}
+    .cta .btn-primary{background:var(--gold);color:var(--forest-deep)}
+    .cta .btn-primary:hover{box-shadow:0 8px 22px rgba(201,146,66,.35)}
+    @media (max-width:860px){
+      .hero-grid,.mission-grid{grid-template-columns:1fr;gap:34px}
+      .hero{padding:44px 0 20px}.hero-img{order:-1}
+      .steps,.plans{grid-template-columns:1fr}
+      .track{grid-template-columns:1fr 1fr;gap:26px 18px}.track:before{display:none}
+    }
+  </style>
+</Base>

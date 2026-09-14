@@ -1,0 +1,173 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = 'Simba & Good สำหรับแบรนด์ — การตลาด ผลิตภัณฑ์ และ AI สำหรับธุรกิจสัตว์เลี้ยง';
+const description = 'Simba & Good คือฝ่ายเอเจนซี่ที่ช่วยให้ธุรกิจสัตว์เลี้ยงเติบโต ทั้งการตลาด ผลิตภัณฑ์และดีไซน์ รวมถึงบริการ AI ที่เป็นกลาง เริ่มต้นด้วยการประเมินความพร้อมด้าน AI ราคา $999';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Marketing, Product & Design, and AI Consulting for Pet Businesses',
+  provider: { '@type': 'Organization', name: 'Simba & Good' },
+  areaServed: 'Global',
+  audience: { '@type': 'Audience', audienceType: 'Pet industry businesses' },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'AI Services for Pet Businesses',
+    itemListElement: [
+      { '@type': 'Offer', name: 'AI Readiness Assessment', price: '999', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'AI Concierge (monthly)', price: '1500', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Process Redesign', price: '3500', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Automation Builds', priceRange: '$2000-$3500', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Knowledge Systems', priceRange: '$3500+', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Custom Assistants', priceRange: '$4000-$6000', priceCurrency: 'USD' },
+      { '@type': 'Offer', name: 'Full AI Implementation', priceRange: '$10000-$18000+', priceCurrency: 'USD' },
+    ],
+  },
+};
+---
+<Base title={title} description={description} path="/for-brands" lang="th" structuredData={serviceSchema}>
+  <header class="hero"><div class="wrap">
+    <span class="eyebrow">สำหรับแบรนด์ · เอเจนซี่ Simba &amp; Good</span>
+    <h1>การตลาด ผลิตภัณฑ์ และ AI — สร้างมาเพื่ออุตสาหกรรมสัตว์เลี้ยงโดยเฉพาะ</h1>
+    <p>เราช่วยให้ธุรกิจสัตว์เลี้ยงเติบโต ทันสมัย และดูดีสมกับธุรกิจ — ตั้งแต่คลินิกและร้านตัดขน ไปจนถึงอาหารสัตว์เลี้ยง ร้านค้าปลีก และ pet-tech นำทีมโดยคนด้านผลิตภัณฑ์และดีไซน์ที่หลงรักอุตสาหกรรมนี้จริง ๆ</p>
+    <div class="who">
+      <span>สัตวแพทย์และคลินิก</span><span>ร้านตัดขนและรับฝากเลี้ยง</span><span>อาหารสัตว์เลี้ยงและ D2C</span>
+      <span>ร้านค้าปลีกสัตว์เลี้ยง</span><span>Pet-tech</span><span>สถานสงเคราะห์และหน่วยช่วยเหลือ</span>
+    </div>
+  </div></header>
+
+  <section class="disc"><div class="wrap">
+    <h2>สามสิ่งที่เราทำได้ดี</h2>
+    <p>เลือกอย่างใดอย่างหนึ่ง หรือรวมกันก็ได้ ทุกงานมีขอบเขตรายเดือนที่ตายตัว — ไม่มีบิลที่คาดไม่ถึง ไม่มีสัญญาที่ไม่มีวันจบ</p>
+  </div></section>
+
+  <section class="wrap">
+    <div class="tiers">
+      <div class="tier">
+        <span class="kind">การตลาด · เบื้องต้น</span>
+        <h3>คงการมองเห็นในตลาดไว้</h3>
+        <div class="price">$1,000<span style="font-size:16px">/mo</span></div>
+        <span class="per">รายเดือนต่อเนื่อง · ยกเลิกได้ทุกเมื่อ</span>
+        <ul><li>คอนเทนต์โซเชียล วางแผนและโพสต์ให้</li><li>แคมเปญหรือโปรโมชันรายเดือน</li><li>ซัพพอร์ตงานดีไซน์เบา ๆ ตามที่ต้องการ</li><li>สรุปผลลัพธ์รายเดือนแบบเข้าใจง่าย</li></ul>
+        <a class="btn btn-primary" href="https://calendly.com/piyushsinha/simba-and-good-for-brands-intro-call">จองการโทร</a>
+      </div>
+      <div class="tier feature">
+        <span class="kind">การตลาด · เติบโต</span>
+        <h3>เติบโตอย่างมีทิศทาง</h3>
+        <div class="price">$3,000<span style="font-size:16px">/mo</span></div>
+        <span class="per">ได้รับความนิยมสูงสุดสำหรับแบรนด์ที่กำลังขยายตัว</span>
+        <ul><li>ระบบคอนเทนต์ครบวงจรในทุกช่องทาง</li><li>ออกแบบแลนดิ้งเพจและแคมเปญ</li><li>แอสเซ็ตแบรนด์และทิศทางครีเอทีฟ</li><li>อีเมล / lifecycle marketing</li><li>ประชุมวางกลยุทธ์รายเดือน</li></ul>
+        <a class="btn btn-primary" href="https://calendly.com/piyushsinha/simba-and-good-for-brands-intro-call">จองการโทร</a>
+      </div>
+      <div class="tier">
+        <span class="kind">ผลิตภัณฑ์และดีไซน์</span>
+        <h3>สร้างสิ่งที่ยิ่งใหญ่</h3>
+        <div class="price">เริ่มต้นที่ $5,000<span style="font-size:16px">/เดือน</span></div>
+        <span class="per">สำหรับ pet-tech และแบรนด์ที่ขับเคลื่อนด้วยผลิตภัณฑ์</span>
+        <ul><li>UX และ UI สำหรับแอปและเว็บไซต์</li><li>กลยุทธ์ผลิตภัณฑ์และ roadmap</li><li>ระบบดีไซน์และโปรโตไทป์</li><li>ผู้นำระดับซีเนียร์ด้านผลิตภัณฑ์/ดีไซน์</li></ul>
+        <a class="btn btn-primary" href="https://calendly.com/piyushsinha/simba-and-good-for-brands-intro-call">จองการโทร</a>
+      </div>
+    </div>
+
+    <div class="note"><b>การทำงานร่วมกับเราก็ช่วยสนับสนุนพันธกิจด้วยเช่นกัน</b> &nbsp;รายได้ส่วนหนึ่งของเอเจนซี่มอบให้สวัสดิภาพสัตว์ — การเติบโตของธุรกิจคุณจึงช่วยเหลือสัตว์ได้มากกว่าแค่ลูกค้าของคุณเอง</div>
+  </section>
+
+  <section class="ai-section"><div class="wrap">
+    <span class="eyebrow">AI สำหรับธุรกิจสัตว์เลี้ยง</span>
+    <h2>เริ่มต้นด้วยการวินิจฉัย แล้วให้มันเผยงานที่มีมูลค่าสูงกว่า</h2>
+    <p class="ai-sub">บริการที่เป็นกลาง ไม่ผูกติดกับผู้ให้บริการรายใดรายหนึ่ง — เราสร้างด้วยเครื่องมือที่เหมาะสมที่สุด คุณจึงไม่ถูกล็อกกับผู้ให้บริการเจ้าเดียว ทุกงานที่ทำ ทีมของคุณจะได้เครื่องมือ AI ที่เป็นเจ้าของเองและใช้งานต่อได้โดยไม่ต้องพึ่งเรา</p>
+
+    <div class="ai-wedge">
+      <span class="ai-n">01</span>
+      <div>
+        <h3>การประเมินความพร้อมด้าน AI <span class="star">★ เริ่มที่นี่</span></h3>
+        <p>เซสชันทำงาน 45 นาที → แผนที่จัดลำดับความสำคัญ 3-7 จุดที่ AI ช่วยประหยัดเวลาจริงให้ทีมคุณ (การจอง การสื่อสารกับลูกค้า สต๊อกสินค้า คอนเทนต์ รีวิว) การประเมินส่วนใหญ่จะเผยให้เห็นโปรเจกต์มูลค่าสูงสองถึงสามโปรเจกต์</p>
+      </div>
+      <div class="ai-price">$999<span>ราคาคงที่ หักลบได้กับขั้นตอนถัดไป</span></div>
+    </div>
+
+    <div class="ai-ladder">
+      <div class="ai-row"><span class="ai-n">02</span><div class="ai-name">AI Concierge <small>รายเดือน</small></div><div class="ai-p">$1,500<small>/เดือน</small></div><div class="ai-d">คอล 45 นาทีสองครั้งต่อเดือน แปลงเป็นผู้ช่วย AI ที่ใช้งานซ้ำได้จริงสำหรับทีมของคุณ</div></div>
+      <div class="ai-row"><span class="ai-n">03</span><div class="ai-name">ออกแบบกระบวนการใหม่</div><div class="ai-p">$3,500</div><div class="ai-d">นำกระบวนการหลายขั้นตอนที่ยุ่งยากมาตัดให้สั้นลง ตัวอย่างคลินิกหนึ่งแห่ง: ขั้นตอนรับผู้ป่วย 25 ขั้นตอน → เหลือ 10</div></div>
+      <div class="ai-row"><span class="ai-n">04</span><div class="ai-name">สร้างระบบอัตโนมัติ</div><div class="ai-p">$2K–$3.5K</div><div class="ai-d">เชื่อมต่อเครื่องมือที่คุณใช้อยู่แล้วเข้าด้วยกันเป็นเวิร์กโฟลว์อัตโนมัติ — ตั้งแต่การจองไปจนถึงการติดตามผล โดยอัตโนมัติ</div></div>
+      <div class="ai-row"><span class="ai-n">05</span><div class="ai-name">ระบบจัดการองค์ความรู้</div><div class="ai-p">$3.5K+</div><div class="ai-d">เปลี่ยนข้อมูลที่กระจัดกระจาย — อีเมล ขั้นตอนปฏิบัติงาน แคตตาล็อก — ให้กลายเป็นคำตอบทันทีในสไตล์แบรนด์คุณ</div></div>
+      <div class="ai-row"><span class="ai-n">06</span><div class="ai-name">ผู้ช่วยเฉพาะทาง</div><div class="ai-p">$4K–$6K</div><div class="ai-d">เครื่องมือ AI ที่สร้างเฉพาะสำหรับธุรกิจคุณ งานที่เคยใช้เวลา 45 นาที เหลือแค่ 5 นาที</div></div>
+      <div class="ai-row"><span class="ai-n">07</span><div class="ai-name">การติดตั้งใช้งาน AI แบบเต็มรูปแบบ</div><div class="ai-p">$10K–$18K+</div><div class="ai-d">ผู้ช่วย ระบบอัตโนมัติ และระบบจัดการความรู้ที่นำไปใช้ทั่วทั้งองค์กร พร้อมการฝึกอบรม</div></div>
+    </div>
+
+    <div class="ai-model">
+      <h4>โมเดลการทำงาน</h4>
+      <ol><li>การประเมินคือจุดเริ่มต้น</li><li>ยึดตามชั่วโมงที่ประหยัดได้ ไม่ใช่ชั่วโมงที่ทำงาน</li><li>คุณเป็นเจ้าของสิ่งที่เราสร้าง — ไม่มีการผูกมัด</li></ol>
+    </div>
+    <a class="btn btn-primary" href="https://calendly.com/piyushsinha/simba-and-good-for-brands-intro-call">จองการประเมินราคา $999</a>
+  </div></section>
+
+  <section><div class="cta">
+    <h2>มาช่วยให้ธุรกิจสัตว์เลี้ยงของคุณเติบโตกัน</h2>
+    <p>บอกเราว่าคุณกำลังทำอะไรอยู่ แล้วเราจะกลับมาพร้อมแผนงานและราคารายเดือนที่ตายตัว</p>
+    <a class="btn btn-primary" href="https://calendly.com/piyushsinha/simba-and-good-for-brands-intro-call">จองการโทร</a>
+  </div></section>
+
+  <style>
+    .hero{padding:72px 0 30px}
+    .hero .eyebrow{color:var(--gold)}
+    .hero h1{font-size:clamp(38px,5.2vw,60px);margin:16px 0 20px;max-width:16ch}
+    .hero p{color:var(--muted);font-size:19px;max-width:50ch}
+    .who{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+    .who span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13.5px;color:var(--muted)}
+    .disc{padding:22px 0 8px}
+    .disc h2{font-size:clamp(26px,3.4vw,38px)}
+    .disc p{color:var(--muted);margin-top:12px;max-width:56ch;font-size:16.5px}
+    .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:38px 0 20px}
+    .tier{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column}
+    .tier.feature{background:var(--forest-deep);color:#fff;border-color:var(--forest-deep)}
+    .tier .kind{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+    .tier h3{font-size:23px;margin:10px 0 6px;font-weight:500}
+    .tier.feature h3{color:#fff}
+    .tier .price{font-family:var(--font-heading);font-size:34px;font-weight:600;margin:8px 0 2px}
+    .tier .per{font-size:13.5px;color:var(--muted)}
+    .tier.feature .per{color:#B9C6BC}
+    .tier ul{list-style:none;padding:0;margin:20px 0 0;flex:1}
+    .tier li{font-size:14.5px;color:var(--muted);padding:7px 0 7px 22px;position:relative}
+    .tier.feature li{color:#CDD9CF}
+    .tier li:before{content:"🐾";position:absolute;left:0;font-size:12px;top:8px}
+    .tier .btn{margin-top:22px;text-align:center}
+    .tier.feature .btn-primary{background:var(--gold);color:var(--forest-deep)}
+    .note{background:var(--sage);border-radius:var(--radius);padding:26px 30px;margin:16px 0 40px;font-size:15.5px;color:var(--muted)}
+    .note b{color:var(--ink);font-family:var(--font-heading)}
+    .cta{background:var(--forest);color:#fff;border-radius:26px;padding:52px;text-align:center;margin:0 auto 80px;max-width:var(--wrap)}
+    .cta h2{color:#fff;font-size:clamp(26px,3.4vw,40px);max-width:20ch;margin:0 auto}
+    .cta p{color:#C4D2C7;margin:14px auto 28px;max-width:46ch}
+    .cta .btn-primary{background:var(--gold);color:var(--forest-deep)}
+    .ai-section{padding:20px 0 80px}
+    .ai-section h2{font-size:clamp(26px,3.4vw,38px);max-width:22ch;margin-top:10px}
+    .ai-sub{color:var(--muted);margin:14px 0 36px;max-width:56ch;font-size:16px}
+    .ai-wedge{background:var(--forest-deep);color:#fff;border-radius:var(--radius);padding:26px 30px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;margin-bottom:14px}
+    .ai-wedge .ai-n{font-family:var(--font-heading);font-size:22px;color:var(--gold);font-weight:600}
+    .ai-wedge h3{color:#fff;font-size:19px;font-weight:500;margin:0 0 6px}
+    .ai-wedge .star{color:var(--gold);font-size:12px;font-weight:600;letter-spacing:.05em;margin-left:6px}
+    .ai-wedge p{color:#CDD9CF;font-size:14.5px;max-width:52ch}
+    .ai-price{font-family:var(--font-heading);font-size:26px;font-weight:600;text-align:right;white-space:nowrap}
+    .ai-price span{display:block;font-family:var(--font-body);font-size:12px;color:#B9C6BC;font-weight:400}
+    .ai-ladder{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+    .ai-row{display:grid;grid-template-columns:40px 160px 100px 1fr;gap:16px;align-items:center;padding:16px 24px;border-top:1px solid var(--line)}
+    .ai-row:first-child{border-top:none}
+    .ai-row .ai-n{font-family:var(--font-heading);color:var(--gold);font-weight:600;font-size:15px}
+    .ai-name{font-weight:500;font-size:15px}
+    .ai-name small{display:block;color:var(--muted);font-size:12px;font-weight:400}
+    .ai-p{font-family:var(--font-heading);font-weight:600;font-size:16px}
+    .ai-p small{font-family:var(--font-body);color:var(--muted);font-size:12px;font-weight:400}
+    .ai-d{color:var(--muted);font-size:13.5px}
+    .ai-model{background:var(--sage);border-radius:var(--radius);padding:24px 28px;margin:26px 0 28px}
+    .ai-model h4{font-family:var(--font-heading);font-weight:600;font-size:17px;margin:0 0 10px}
+    .ai-model ol{margin:0;padding-left:20px;color:var(--muted);font-size:14.5px}
+    .ai-model li{padding:3px 0}
+    @media (max-width:860px){
+      .tiers{grid-template-columns:1fr}
+      .ai-wedge{grid-template-columns:1fr}
+      .ai-price{text-align:left}
+      .ai-row{grid-template-columns:1fr;gap:4px;padding:14px 20px}
+    }
+  </style>
+</Base>

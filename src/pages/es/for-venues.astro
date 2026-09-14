@@ -1,0 +1,128 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = 'Simba & Good para Locales — Auditorías, Mejoras y Certificación Pet-Friendly';
+const description = 'Simba & Good ayuda a locales físicos — cafeterías, hoteles, retail, oficinas y más — a volverse verdaderamente pet-friendly: una auditoría de preparación, implementación práctica y una insignia de certificación verificada.';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Pet-Friendly Venue Consulting',
+  provider: { '@type': 'Organization', name: 'Simba & Good' },
+  areaServed: 'Global',
+  audience: { '@type': 'Audience', audienceType: 'Cafes, restaurants, hotels, retail, offices, and other physical venues' },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Pet-Friendly Venue Services',
+    itemListElement: [
+      { '@type': 'Offer', name: 'Pet-Friendly Readiness Audit' },
+      { '@type': 'Offer', name: 'Implementation Consulting' },
+      { '@type': 'Offer', name: 'Certification & Directory Listing' },
+    ],
+  },
+};
+---
+<Base title={title} description={description} path="/for-venues" lang="es" structuredData={serviceSchema}>
+  <header class="hero"><div class="wrap">
+    <span class="eyebrow">Para locales · La agencia Simba &amp; Good</span>
+    <h1>Convierte tu espacio en un lugar donde las mascotas realmente sean bienvenidas.</h1>
+    <p>Ayudamos a locales físicos a lograr una verdadera pet-friendliness &mdash; desde una auditoría clara de dónde estás hoy, hasta las mejoras que importan, y una insignia que lo demuestra a cada dueño de mascota que pasa por ahí.</p>
+    <div class="who">
+      <span>Cafeterías y restaurantes</span><span>Hoteles y alquileres</span><span>Centros comerciales y retail</span>
+      <span>Oficinas y coworking</span><span>Veterinarias y peluquerías</span><span>Parques y espacios públicos</span>
+    </div>
+  </div></header>
+
+  <section class="disc"><div class="wrap">
+    <h2>Tres pasos hacia la certificación.</h2>
+    <p>Un espacio pet-friendly es más que un bebedero junto a la puerta. Te ayudamos a hacerlo bien, arreglar lo que falta y demostrarlo &mdash; a tus clientes y a nosotros.</p>
+  </div></section>
+
+  <section class="wrap">
+    <div class="tiers">
+      <div class="tier">
+        <span class="kind">Paso 01 · Auditoría de Preparación</span>
+        <h3>Sabe exactamente en qué punto estás</h3>
+        <div class="price">A medida</div>
+        <span class="per">Según tu local &middot; agenda una llamada para cotizar</span>
+        <ul>
+          <li>Evaluación presencial o remota con nuestra checklist de pet-friendliness</li>
+          <li>Cubre seguridad, higiene, distribución, pisos y protocolo del personal</li>
+          <li>Informe por escrito con puntuación priorizada</li>
+          <li>Se acredita hacia la Implementación si decides continuar</li>
+        </ul>
+        <a class="btn btn-primary" href="https://calendly.com/piyushsinha/simba-and-good-for-brands-intro-call">Reserva una llamada</a>
+      </div>
+      <div class="tier feature">
+        <span class="kind">Paso 02 · Implementación</span>
+        <h3>Corrige lo que revela la auditoría</h3>
+        <div class="price">Por proyecto</div>
+        <span class="per">Se define tras tu Auditoría</span>
+        <ul>
+          <li>Ubicación de bebederos y estaciones de residuos</li>
+          <li>Guía de pisos y superficies</li>
+          <li>Diseño de señalética y apoyo en producción</li>
+          <li>Guion y sesión de capacitación del personal</li>
+        </ul>
+        <a class="btn btn-primary" href="https://calendly.com/piyushsinha/simba-and-good-for-brands-intro-call">Reserva una llamada</a>
+      </div>
+      <div class="tier">
+        <span class="kind">Paso 03 · Certificación</span>
+        <h3>Demuéstralo y hazte notar</h3>
+        <div class="price">A medida</div>
+        <span class="per">Pago único &middot; pequeña renovación anual</span>
+        <ul>
+          <li>Insignia "Pet-Friendly Verified" y calcomanía para vitrina</li>
+          <li>Aparición en el directorio de locales de Simba &amp; Good</li>
+          <li>Mención en redes sociales al lanzamiento</li>
+          <li>Reauditoría anual para mantener vigente la insignia</li>
+        </ul>
+        <a class="btn btn-primary" href="https://calendly.com/piyushsinha/simba-and-good-for-brands-intro-call">Reserva una llamada</a>
+      </div>
+    </div>
+
+    <div class="note"><b>Trabajar con nosotros también financia la misión.</b> &nbsp;Una parte de todo lo que gana la agencia va al bienestar animal &mdash; así que hacer tu espacio pet-friendly ayuda a animales más allá de quienes lo visitan.</div>
+  </section>
+
+  <section><div class="cta">
+    <h2>Hagamos que tu espacio sea pet-friendly.</h2>
+    <p>Cuéntanos sobre tu local. Volveremos con un plan y un alcance claro.</p>
+    <a class="btn btn-primary" href="https://calendly.com/piyushsinha/simba-and-good-for-brands-intro-call">Reserva una llamada</a>
+  </div></section>
+
+  <style>
+    .hero{padding:72px 0 30px}
+    .hero .eyebrow{color:var(--gold)}
+    .hero h1{font-size:clamp(38px,5.2vw,60px);margin:16px 0 20px;max-width:16ch}
+    .hero p{color:var(--muted);font-size:19px;max-width:50ch}
+    .who{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+    .who span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13.5px;color:var(--muted)}
+    .disc{padding:22px 0 8px}
+    .disc h2{font-size:clamp(26px,3.4vw,38px)}
+    .disc p{color:var(--muted);margin-top:12px;max-width:56ch;font-size:16.5px}
+    .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:38px 0 20px}
+    .tier{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column}
+    .tier.feature{background:var(--forest-deep);color:#fff;border-color:var(--forest-deep)}
+    .tier .kind{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+    .tier h3{font-size:23px;margin:10px 0 6px;font-weight:500}
+    .tier.feature h3{color:#fff}
+    .tier .price{font-family:var(--font-heading);font-size:34px;font-weight:600;margin:8px 0 2px}
+    .tier .per{font-size:13.5px;color:var(--muted)}
+    .tier.feature .per{color:#B9C6BC}
+    .tier ul{list-style:none;padding:0;margin:20px 0 0;flex:1}
+    .tier li{font-size:14.5px;color:var(--muted);padding:7px 0 7px 22px;position:relative}
+    .tier.feature li{color:#CDD9CF}
+    .tier li:before{content:"🐾";position:absolute;left:0;font-size:12px;top:8px}
+    .tier .btn{margin-top:22px;text-align:center}
+    .tier.feature .btn-primary{background:var(--gold);color:var(--forest-deep)}
+    .note{background:var(--sage);border-radius:var(--radius);padding:26px 30px;margin:16px 0 40px;font-size:15.5px;color:var(--muted)}
+    .note b{color:var(--ink);font-family:var(--font-heading)}
+    .cta{background:var(--forest);color:#fff;border-radius:26px;padding:52px;text-align:center;margin:0 auto 80px;max-width:var(--wrap)}
+    .cta h2{color:#fff;font-size:clamp(26px,3.4vw,40px);max-width:20ch;margin:0 auto}
+    .cta p{color:#C4D2C7;margin:14px auto 28px;max-width:46ch}
+    .cta .btn-primary{background:var(--gold);color:var(--forest-deep)}
+    @media (max-width:860px){
+      .tiers{grid-template-columns:1fr}
+    }
+  </style>
+</Base>

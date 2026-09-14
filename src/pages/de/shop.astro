@@ -1,0 +1,60 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Shop for Good — Simba & Good" description="Schön gestaltete digitale Guides und Vorlagen für jede Lebensphase deines Haustiers. Jeder Kauf unterstützt Tierschutz." path="/shop" lang="de">
+  <header class="page-head"><div class="wrap">
+    <img src="/images/shop-for-good-wordmark.svg" alt="Shop for Good — Simba &amp; Good" class="shop-logo" />
+    <h1>Kleine Guides für große Verantwortung.</h1>
+    <p>Praktische, schön gestaltete digitale Guides und Vorlagen für jede Lebensphase deines Haustiers — sofortiger Download, für immer deins.</p>
+    <span class="give-strip">🐾 Jeder Kauf unterstützt Tierschutz.</span>
+  </div></header>
+
+  <section class="wrap">
+    <div class="grid">
+      <div class="card"><img src="/images/shop/puppys-first-year.jpg" alt="Puppy's First Year cover" class="card-img" /><div class="card-body"><span class="kind">Digitaler Guide</span><h3>Das erste Jahr deines Welpen</h3><p>Ein wöchentlicher Plan für die zwölf wichtigsten Monate — Impfungen, Trainingsfenster, Ernährungsumstellungen und Meilensteine.</p><div class="row"><span class="price">$12</span><a class="buy" href="https://simbaandgood.gumroad.com/l/puppysfirstweek">Kaufen</a></div></div></div>
+      <div class="card"><img src="/images/shop/pet-emergency-firstaid.jpg" alt="Pet Emergency & First-Aid cover" class="card-img" /><div class="card-body"><span class="kind">Digitaler Guide</span><h3>Notfall &amp; Erste Hilfe für Haustiere</h3><p>Was in den entscheidenden Momenten zu tun ist, bevor du beim Tierarzt bist. Klare Schritte für die Situationen, vor denen sich jeder Besitzer fürchtet.</p><div class="row"><span class="price">$12</span><a class="buy" href="https://simbaandgood.gumroad.com/l/petemergencyandfirstaid">Kaufen</a></div></div></div>
+      <div class="card"><img src="/images/shop/new-pet-setup-kit.jpg" alt="New Pet Setup Kit cover" class="card-img" /><div class="card-body"><span class="kind">Checkliste</span><h3>Starter-Kit für neue Haustiere</h3><p>Alles zum Kaufen, Buchen und Vorbereiten, bevor es nach Hause kommt — damit Tag eins ruhig statt chaotisch ist.</p><div class="row"><span class="price">$12</span><a class="buy" href="https://simbaandgood.gumroad.com/l/newpetsetupkit">Kaufen</a></div></div></div>
+      <div class="card"><img src="/images/shop/senior-pet-care.jpg" alt="Senior Pet Care cover" class="card-img" /><div class="card-body"><span class="kind">Digitaler Guide</span><h3>Pflege für Senior-Haustiere</h3><p>Wir helfen älteren Haustieren, komfortabel und gesund zu bleiben — was sich ändert, worauf zu achten ist, und wie ihre späteren Jahre gut werden.</p><div class="row"><span class="price">$12</span><a class="buy" href="https://simbaandgood.gumroad.com/l/seniorpetcare">Kaufen</a></div></div></div>
+      <div class="card"><img src="/images/shop/pet-health-records.jpg" alt="Pet Health Records cover" class="card-img" /><div class="card-body"><span class="kind">Vorlagen</span><h3>Gesundheitsakte für dein Haustier</h3><p>Ausdruckbare Tracker für Impfungen, Gewicht, Medikamente und Tierarztbesuche — ein ordentlicher Ort für die gesamte Historie deines Haustiers.</p><div class="row"><span class="price">$12</span><a class="buy" href="https://simbaandgood.gumroad.com/l/pethealthrecords">Kaufen</a></div></div></div>
+      <div class="card"><img src="/images/shop/breed-care-basics.jpg" alt="Breed Care Basics cover" class="card-img" /><div class="card-body"><span class="kind">Digitaler Guide</span><h3>Rassespezifische Grundpflege</h3><p>Erfahre, was deine Rasse wirklich braucht — Bewegung, Fellpflege, häufige Gesundheitsrisiken und Lebensphasen, verständlich erklärt.</p><div class="row"><span class="price">$12</span><a class="buy" href="https://simbaandgood.gumroad.com/l/breedcarebasics">Kaufen</a></div></div></div>
+    </div>
+
+    <div class="bundle">
+      <img src="/images/shop/bundle.jpg" alt="The Whole-Life Bundle cover" class="bundle-img" />
+      <div>
+        <span class="eyebrow">Bestes Preis-Leistungs-Verhältnis</span>
+        <h3 style="margin-top:10px">Das Ganzes-Leben-Bundle</h3>
+        <p>Alle sechs Guides und Vorlagen, vom ersten Tag bis ins Seniorenalter. Ein Download, ein Preis — und ein größerer Beitrag für Tiere in Not.</p>
+      </div>
+      <div style="text-align:right">
+        <div class="price" style="color:#fff;font-size:30px">$65</div>
+        <a class="buy" href="https://simbaandgood.gumroad.com/l/thewholelifebundle" style="margin-top:10px;display:inline-block">Bundle sichern</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .page-head{padding:64px 0 20px}
+    .shop-logo{width:340px;max-width:80%;height:auto;display:block;margin-bottom:22px}
+    .page-head h1{font-size:clamp(36px,5vw,58px);margin:16px 0 16px}
+    .page-head p{color:var(--muted);font-size:18px;max-width:52ch}
+    .give-strip{display:inline-flex;gap:10px;align-items:center;background:var(--sage);border-radius:999px;padding:9px 18px;font-size:14px;font-weight:500;margin-top:22px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:36px 0 40px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+    .card-img{width:100%;aspect-ratio:640/828;object-fit:cover;display:block;background:var(--forest-deep)}
+    .card-body{padding:22px 26px 26px;display:flex;flex-direction:column;flex:1}
+    .card .kind{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+    .card h3{font-size:20px;margin:10px 0 8px;font-weight:500}
+    .card p{color:var(--muted);font-size:14.5px;flex:1}
+    .card .row{display:flex;align-items:center;justify-content:space-between;margin-top:20px}
+    .price{font-family:var(--font-heading);font-size:22px;font-weight:600}
+    .buy{background:var(--gold);color:var(--forest-deep);font-weight:600;font-size:14px;text-decoration:none;padding:9px 18px;border-radius:999px}
+    .buy:hover{filter:brightness(1.05)}
+    .bundle{background:var(--forest-deep);color:#fff;border-radius:var(--radius);padding:28px 34px;display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center;margin-bottom:80px}
+    .bundle-img{width:96px;height:auto;border-radius:10px;display:block;box-shadow:0 12px 24px -10px rgba(0,0,0,.5)}
+    .bundle h3{color:#fff;font-size:24px}
+    .bundle p{color:#B9C6BC;margin-top:8px;max-width:52ch;font-size:15px}
+    .bundle .buy{background:var(--gold)}
+    @media (max-width:860px){.grid{grid-template-columns:1fr}.bundle{grid-template-columns:1fr}.bundle-img{width:80px}}
+  </style>
+</Base>

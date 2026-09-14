@@ -1,17 +1,52 @@
 ---
+import { locales, defaultLocale, localizedPath, switchLocalePath } from '../i18n/locales';
+
+const { lang = defaultLocale, path = '/' } = Astro.props;
+
+// Nav labels per locale. Product/app names (Seasons, Shop for Good) stay
+// unchanged since they're proper names, not descriptions.
+const nav = {
+  en: { seasons: 'Seasons app', shop: 'Shop for Good', brands: 'For brands', venues: 'For venues', mission: 'Mission', stories: 'Stories' },
+  es: { seasons: 'App Seasons', shop: 'Shop for Good', brands: 'Para marcas', venues: 'Para locales', mission: 'Misión', stories: 'Historias' },
+  pt: { seasons: 'App Seasons', shop: 'Shop for Good', brands: 'Para marcas', venues: 'Para espaços', mission: 'Missão', stories: 'Histórias' },
+  th: { seasons: 'แอป Seasons', shop: 'Shop for Good', brands: 'สำหรับแบรนด์', venues: 'สำหรับสถานที่', mission: 'พันธกิจ', stories: 'เรื่องราว' },
+  de: { seasons: 'Seasons App', shop: 'Shop for Good', brands: 'Für Marken', venues: 'Für Standorte', mission: 'Mission', stories: 'Geschichten' },
+  fr: { seasons: 'App Seasons', shop: 'Shop for Good', brands: 'Pour les marques', venues: 'Pour les lieux', mission: 'Mission', stories: 'Histoires' },
+  it: { seasons: 'App Seasons', shop: 'Shop for Good', brands: 'Per i brand', venues: 'Per i locali', mission: 'Missione', stories: 'Storie' },
+} as const;
+
+const t = nav[lang as keyof typeof nav] ?? nav.en;
+
+// All of these pages now exist in every locale, so nav links stay within
+// the current language rather than jumping back to English.
+const home = localizedPath('/', lang);
+const seasonsHref = localizedPath('/seasons', lang);
+const shopHref = localizedPath('/shop', lang);
+const brandsHref = localizedPath('/for-brands', lang);
+const venuesHref = localizedPath('/for-venues', lang);
+const missionHref = localizedPath('/welfare-plan', lang);
+const storiesHref = localizedPath('/stories', lang);
 ---
 <nav>
   <div class="wrap nav-in">
-    <a class="brand" href="/">Simba <span>&amp;</span> Good</a>
+    <a class="brand" href={home}>Simba <span>&amp;</span> Good</a>
     <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
     <div class="nav-links">
-      <a href="/seasons">Seasons app</a>
-      <a href="/shop">Shop for Good</a>
-      <a href="/for-brands">For brands</a>
-      <a href="/for-venues">For venues</a>
+      <a href={seasonsHref}>{t.seasons}</a>
+      <a href={shopHref}>{t.shop}</a>
+      <a href={brandsHref}>{t.brands}</a>
+      <a href={venuesHref}>{t.venues}</a>
       <span class="nav-divider" aria-hidden="true"></span>
-      <a href="/welfare-plan">Mission</a>
-      <a href="/stories">Stories</a>
+      <a href={missionHref}>{t.mission}</a>
+      <a href={storiesHref}>{t.stories}</a>
+      <div class="lang-switch">
+        <button class="lang-btn" aria-haspopup="true" aria-expanded="false">{locales[lang as keyof typeof locales]?.label ?? 'English'} <span class="lang-caret">▾</span></button>
+        <div class="lang-menu">
+          {Object.entries(locales).map(([code, meta]) => (
+            <a href={switchLocalePath(path, code)} class={code === lang ? 'active' : ''}>{meta.label}</a>
+          ))}
+        </div>
+      </div>
     </div>
   </div>
 </nav>
@@ -22,4 +57,33 @@
     const open = links?.classList.toggle('open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
+
+  const langBtn = document.querySelector('.lang-btn');
+  const langSwitch = document.querySelector('.lang-switch');
+  langBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = langSwitch?.classList.toggle('open');
+    langBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', () => {
+    langSwitch?.classList.remove('open');
+    langBtn?.setAttribute('aria-expanded', 'false');
+  });
 </script>
+<style>
+  .lang-switch{position:relative}
+  .lang-btn{background:none;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;color:var(--muted);font-weight:500;cursor:pointer;font-family:inherit}
+  .lang-btn:hover{border-color:var(--forest);color:var(--forest)}
+  .lang-caret{font-size:11px}
+  .lang-menu{display:none;position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:6px;min-width:140px;box-shadow:0 12px 28px -12px rgba(23,50,41,.25);z-index:60}
+  .lang-switch.open .lang-menu{display:block}
+  .lang-menu a{display:block;padding:8px 12px;border-radius:8px;font-size:14px;color:var(--ink);text-decoration:none;font-weight:500;border-bottom:none}
+  .lang-menu a:hover{background:var(--sage)}
+  .lang-menu a.active{color:var(--forest);font-weight:600}
+  @media (max-width:900px){
+    .lang-switch{margin-top:12px}
+    .lang-menu{position:static;display:block;box-shadow:none;border:none;padding:0;margin-top:6px}
+    .lang-switch:not(.open) .lang-menu{display:none}
+    .lang-btn{width:100%;text-align:left}
+  }
+</style>

@@ -1,0 +1,108 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Notre plan de bien-être animal — Simba & Good" description="Comment nous augmentons nos dons pour le bien-être animal au fil du temps — d’un plancher de revenus aujourd’hui jusqu’au rêve de 70% des bénéfices." path="/welfare-plan" lang="fr">
+  <header class="hero"><div class="wrap">
+    <span class="eyebrow">Notre plan de bien-être animal</span>
+    <h1>Le rêve : reverser 70% de nos bénéfices.</h1>
+    <p>Nous n’allons pas prétendre qu’une toute nouvelle entreprise peut reverser l’essentiel de ses bénéfices dès le premier jour. Voici donc la version honnête — ce à quoi nous nous engageons maintenant, et l’avenir vers lequel nous construisons.</p>
+    <div class="honest"><b>Pourquoi "le rêve" et non "la promesse".</b> &nbsp;Au début, les bénéfices sont minces — une part du <em>chiffre d’affaires</em> va donc aux animaux dès le premier mois, sans attendre la rentabilité. En grandissant, la part des bénéfices que nous donnons augmente. 70% est la destination vers laquelle nous construisons, ouvertement.</div>
+  </div></header>
+
+  <section class="plan"><div class="wrap">
+    <span class="eyebrow">Le chemin</span>
+    <h2>Comment nous y parvenons.</h2>
+    <p class="sub">Trois phases, chacune donnant plus que la précédente — et chaque étape rapportée publiquement.</p>
+    <div class="stairs">
+      <div class="stair">
+        <span class="phase">Phase 1 · Maintenant</span>
+        <div class="big">Dès le premier jour</div>
+        <h3>Une part du chiffre d’affaires</h3>
+        <p>Une part fixe de tout ce que nous gagnons va au bien-être animal dès le lancement — avant même d’être rentables.</p>
+      </div>
+      <div class="stair">
+        <span class="phase">Phase 2 · Croissance</span>
+        <div class="big">Plus chaque année</div>
+        <h3>Une part croissante des bénéfices</h3>
+        <p>À mesure que l’entreprise devient durable, nous augmentons ce que nous donnons — et publions exactement combien.</p>
+      </div>
+      <div class="stair dream">
+        <span class="phase">Phase 3 · Le rêve</span>
+        <div class="big">70%</div>
+        <h3>De nos bénéfices, pour les animaux</h3>
+        <p>La destination : la grande majorité de ce que nous gagnons va directement aux animaux qui en ont besoin.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="goes"><div class="wrap">
+    <span class="eyebrow">Où ça va</span>
+    <h2>Une aide réelle, pour de vrais animaux.</h2>
+    <div class="goes-grid">
+      <div class="goes-card"><h3>Sauvetage et replacement</h3><p>Nous aidons les refuges à soigner, présenter et faire adopter les animaux.</p></div>
+      <div class="goes-card"><h3>Soins vétérinaires</h3><p>Des traitements pour les animaux qui, sinon, n’en auraient pas.</p></div>
+      <div class="goes-card"><h3>Animaux errants</h3><p>Stérilisation, nourriture et soins pour les animaux livrés à eux-mêmes.</p></div>
+      <div class="goes-card"><h3>Soutien aux sanctuaires</h3><p>Nous soutenons celles et ceux qui font déjà le travail difficile sur le terrain.</p></div>
+    </div>
+  </div></section>
+
+  <section class="trans"><div class="wrap">
+    <span class="eyebrow">Notre engagement sur ce point</span>
+    <h2>Quoi que nous donnions, nous vous le montrerons.</h2>
+    <p>Chaque année, nous publierons ce que nous avons gagné, ce que nous avons donné, et où c’est allé. Un engagement de don qu’on ne peut pas vérifier n’en est pas un — le nôtre sera donc toujours transparent.</p>
+  </div></section>
+
+  <section><div class="cta">
+    <h2>Choisissez par où commencer.</h2>
+    <p>Que ce soit pour votre propre animal, un cadeau ou votre entreprise — il y a une place pour vous.</p>
+    <div class="cta-links">
+      <a class="btn btn-primary" href="/fr/seasons">App Seasons</a>
+      <a class="btn btn-ghost-dark" href="/fr/shop">Shop for Good</a>
+      <a class="btn btn-ghost-dark" href="/fr/for-brands">Pour les marques</a>
+      <a class="btn btn-ghost-dark" href="/fr/for-venues">Pour les lieux</a>
+    </div>
+  </div></section>
+
+  <style>
+    .hero{padding:70px 0 20px}
+    .hero .eyebrow{color:var(--gold)}
+    .hero h1{font-size:clamp(38px,5.4vw,62px);margin:16px 0 20px;max-width:18ch}
+    .hero p{color:var(--muted);font-size:18.5px;max-width:56ch}
+    .honest{background:var(--sage);border-radius:var(--radius);padding:26px 30px;margin:34px 0 0;font-size:16px;color:var(--muted)}
+    .honest b{color:var(--ink);font-family:var(--font-heading)}
+    .plan{padding:78px 0}
+    .plan h2{font-size:clamp(28px,3.6vw,40px);max-width:16ch}
+    .plan .sub{color:var(--muted);margin:14px 0 46px;max-width:52ch;font-size:16.5px}
+    .stairs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:end}
+    .stair{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+    .stair:nth-child(1){margin-top:80px}
+    .stair:nth-child(2){margin-top:40px}
+    .stair.dream{background:var(--forest-deep);color:#fff;border-color:var(--forest-deep);margin-top:0}
+    .stair .phase{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+    .stair .big{font-family:var(--font-heading);font-size:34px;font-weight:600;margin:10px 0 4px}
+    .stair h3{font-size:18px;margin:2px 0 10px;font-weight:500}
+    .stair.dream h3{color:#fff}
+    .stair p{font-size:14px;color:var(--muted)}
+    .stair.dream p{color:#B9C6BC}
+    .goes{background:var(--forest-deep);color:#fff;padding:74px 0}
+    .goes .eyebrow{color:var(--gold)}
+    .goes h2{color:#fff;font-size:clamp(26px,3.4vw,38px);max-width:16ch;margin-top:14px}
+    .goes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+    .goes-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:24px}
+    .goes-card h3{color:#fff;font-size:17px;font-weight:500}
+    .goes-card p{color:#AEBDB1;font-size:13.5px;margin-top:8px}
+    .trans{padding:80px 0;text-align:center}
+    .trans h2{font-size:clamp(26px,3.4vw,38px);max-width:20ch;margin:14px auto 0}
+    .trans p{color:var(--muted);max-width:54ch;margin:18px auto 0;font-size:16.5px}
+    .cta{background:var(--forest);color:#fff;border-radius:26px;padding:52px;text-align:center;margin:20px auto 80px;max-width:var(--wrap)}
+    .cta h2{color:#fff;font-size:clamp(26px,3.4vw,40px);max-width:20ch;margin:0 auto}
+    .cta p{color:#C4D2C7;margin:14px auto 28px;max-width:44ch}
+    .cta .btn-primary{background:var(--gold);color:var(--forest-deep)}
+    .btn-ghost-dark{border:1px solid rgba(255,255,255,.35);color:#fff;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px}
+    .btn-ghost-dark:hover{background:rgba(255,255,255,.08)}
+    @media (max-width:860px){
+      .stairs{grid-template-columns:1fr}.stair:nth-child(1),.stair:nth-child(2){margin-top:0}
+      .goes-grid{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</Base>

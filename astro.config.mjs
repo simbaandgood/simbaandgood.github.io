@@ -5,4 +5,11 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://simbaandgood.com',
   integrations: [sitemap()],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'es', 'pt', 'th', 'de', 'fr', 'it'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 });

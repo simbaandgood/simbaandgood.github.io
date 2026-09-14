@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Contacto — Simba & Good" description="Consigue acceso anticipado a Seasons, o trabaja con nuestra agencia del sector de mascotas." path="/contact" lang="es">
+  <header class="page-head"><div class="wrap">
+    <span class="eyebrow">Contacto</span>
+    <h1>Hablemos.</h1>
+    <p>Ya sea que ames a las mascotas o dirijas un negocio que las atiende, hay una buena razón para escribirnos.</p>
+  </div></header>
+
+  <section class="wrap"><div class="cols">
+    <div class="card">
+      <span class="kind">Dueños de mascotas</span>
+      <h2>Consigue acceso anticipado</h2>
+      <p>Sé el primero en saber cuándo se lanza Seasons. Sin spam — solo un correo cuando esté listo.</p>
+      <a class="btn btn-primary" href="https://tally.so/r/q48YO2" target="_blank" rel="noopener">Únete a la lista de espera</a>
+    </div>
+    <div class="card dark">
+      <span class="kind">Marcas</span>
+      <h2>Trabaja con nosotros</h2>
+      <p>Marketing, producto y diseño, o IA para tu negocio de mascotas. Cuéntanos qué estás construyendo y volveremos con un plan.</p>
+      <a class="btn btn-primary" href="https://calendly.com/piyushsinha/simba-and-good-for-brands-intro-call" target="_blank" rel="noopener">Reserva una llamada</a>
+    </div>
+  </div></section>
+
+  <section class="direct"><div class="wrap">
+    <p>O escríbenos directamente a <a class="email-link" href="#" data-user="hello" data-domain="simbaandgood.com" aria-label="Escríbenos">(cargando…)</a></p>
+  </div></section>
+
+  <script>
+    document.querySelectorAll('.email-link').forEach((el) => {
+      const user = el.getAttribute('data-user');
+      const domain = el.getAttribute('data-domain');
+      if (!user || !domain) return;
+      const address = user + '@' + domain;
+      el.setAttribute('href', 'mailto:' + address);
+      el.textContent = address;
+    });
+  </script>
+
+  <style>
+    .page-head{padding:66px 0 12px}
+    .page-head h1{font-size:clamp(38px,5.2vw,60px);margin:16px 0 16px}
+    .page-head p{color:var(--muted);font-size:18px;max-width:46ch}
+    .cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:40px 0 30px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px}
+    .card.dark{background:var(--forest-deep);color:#fff;border-color:var(--forest-deep)}
+    .card .kind{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+    .card h2{font-size:24px;margin:12px 0 10px}
+    .card.dark h2{color:#fff}
+    .card p{color:var(--muted);font-size:15px;margin-bottom:22px}
+    .card.dark p{color:#B9C6BC}
+    .card.dark .btn-primary{background:var(--gold);color:var(--forest-deep)}
+    .direct{padding:20px 0 80px;text-align:center}
+    .direct p{color:var(--muted);font-size:15px}
+    .direct a{color:var(--forest);font-weight:600;text-decoration:none}
+    @media (max-width:860px){.cols{grid-template-columns:1fr}}
+  </style>
+</Base>

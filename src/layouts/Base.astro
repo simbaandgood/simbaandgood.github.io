@@ -2,19 +2,29 @@
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import { locales, defaultLocale, fontsFor, localizedPath } from '../i18n/locales';
 
 const {
   title = 'Simba & Good — Better care for the pets we love, and the ones who need it',
   description = 'Simba & Good is a pet-industry company: Seasons, a pet lifecycle app; a marketing, product & AI agency for pet businesses; and Shop for Good, a mission-driven storefront — all funding animal welfare.',
   path = '/',
+  lang = defaultLocale,
   image = '/images/simba-good-seasons-lockup-1600x520.png',
   type = 'website',
   structuredData = null,
 } = Astro.props;
 
 const site = 'https://simbaandgood.com';
-const canonical = new URL(path, site).toString();
+const canonical = new URL(localizedPath(path, lang), site).toString();
 const ogImage = new URL(image, site).toString();
+const fonts = fontsFor(lang);
+const htmlLang = locales[lang as keyof typeof locales]?.htmlLang ?? 'en';
+
+// hreflang alternates so search engines know this page has translated versions
+const alternates = Object.keys(locales).map((code) => ({
+  code,
+  href: new URL(localizedPath(path, code), site).toString(),
+}));
 
 const orgSchema = {
   '@context': 'https://schema.org',
@@ -27,7 +37,7 @@ const orgSchema = {
 };
 ---
 <!doctype html>
-<html lang="en">
+<html lang={htmlLang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,6 +45,10 @@ const orgSchema = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <meta name="robots" content="index, follow" />
+    {alternates.map((alt) => (
+      <link rel="alternate" hreflang={alt.code} href={alt.href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={new URL(localizedPath(path, defaultLocale), site).toString()} />
 
     <!-- Open Graph -->
     <meta property="og:type" content={type} />
@@ -56,11 +70,12 @@ const orgSchema = {
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href={`https://fonts.googleapis.com/css2?${fonts.googleFontsParam}&display=swap`} rel="stylesheet" />
+    <style set:html={`:root{--font-heading:${fonts.heading};--font-body:${fonts.body};--heading-line-height:${fonts.headingLineHeight};}`} />
   </head>
   <body>
-    <Navbar />
+    <Navbar lang={lang} path={path} />
     <slot />
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>
